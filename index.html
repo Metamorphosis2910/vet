@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ветеринар</title>
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">    
+</head>
+<body style="overflow-x:hidden">
+    <header class="header">
+        <div class="container">
+            <div class="header_main">
+                <div class="header_nav d-flex justify-content-between">
+                    <div class="logo d-flex flex-column">
+                        <a href="index.html">
+                            <p class="logo_text-1 m-0">ФПЖ</p>
+                            <p class="logo_text-2">Фонд помощи животным</p>
+                        </a>
+                    </div>
+                    <div class="navigation-regular d-flex align-items-center navbar-expand-xl">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                                Категории
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a href="desk/poterya/index.html" class="table_bordered">Потеря</a></li>
+                              <li><a href="desk/naideno/index.html" class="table_bordered">Найдено</a></li>
+                              <li><a href="desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
+                            </ul>
+                          </div>
+                        <a href="podacha/index.html" class="table_bordered">Подать объявление</a>
+                        <li><a href="autorization/index.html" class="table_bordered">Профиль</a></li>
+                        <form class="searchbar d-flex">
+                            <input class="form-control me-2" type="Поиск" placeholder="Поиск" aria-label="Поиск">
+                            <button class="btn btn-outline-success" type="submit">Поиск</button>
+                        </form>
+                    </div> 
+                </div>
+                <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
+                    <div class="navbar-expand-lg d-flex justify-content-start">
+                      <div class="transparency collapse"   id="navbarToggleExternalContent">
+                         <div class="nav-link d-flex flex-column text-center">          
+                            <a href="index.html" class="table-bordered">На главную</a>
+                            <a href="personalpage/index.html" class="table-bordered">Личный кабинет</a>
+                            <a href="autorization/index.html" class="table-bordered">Авторизация</a>
+                            <a href="desk/poterya/index.html" class="table-bordered">Потеря</a>
+                            <a href="desk/naideno/index.html" class="table-bordered">Найдено</a>
+                            <a href="desk/klinika/index.html" class="table-bordered">Вет. Клиники</a>
+                         </div>
+                      </div>
+                   </div>
+                     <nav class="navbar d-flex justify-content-end">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fas-sharp fa-solid fa-bars"></i></span>
+                       </button>
+                     </nav>
+                  </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main_background d-flex align-items-center">
+            <div class="container">
+                <div class="main_text">
+                    <div class="main_text-sub"> 
+                        <div class="container"> 
+                            <h2 class="zagolovok text-center">
+                                Выберите нужную вам категорию
+                            </h2>
+                            <div class="main_categories">
+                                <div class="column-category col-first d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/poterya/index.html" class="icon-a_1"><img src="icons/icons8-круг-96.png" class="icon-2" alt=""></a>
+                                            <img src="icons/dog.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/poterya/index.html" class="category-link"><p>Потеря</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-second d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/naideno/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (1).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-мопс-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/naideno/index.html" class="category-link"><p>Найдено</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-third d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/perederjka/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (2).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-кошка-48 (1).png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/perederjka/index.html" class="category-link"><p>Передержка</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-four d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/vigul/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (3).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-собака-гуляет-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/vigul/index.html" class="category-link"><p>Выгул</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-five d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/klinika/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (4).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-ветеринар-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/klinika/index.html" class="category-link"><p>Вет.Клиники</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-six d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/tovari/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (5).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-когтеточка-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/tovari/index.html" class="category-link"><p>Товары для животных</p></a>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="column-category col-seven d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/uslugi/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (6).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-собачья-кость-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/uslugi/index.html" class="category-link"><p>Услуги для животных</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-eight d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/otdam/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (7).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-ошейник-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/otdam/index.html" class="category-link"><p>Отдам даром</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-nine d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/kuplya-prodaja/index.html" class="icon-a_1"><img src="icons/icons8-круг-96 (8).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-собачья-сумка-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/kuplya-prodaja/index.html" class="category-link"><p>Купля-продажа</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-ten d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/urhelp/index.html" class="icon-a_1"><img src="icons/icons8-круг-96(10).png" class="icon-2" alt=""></a>
+                                            <img src="icons/icons8-бумага-48.png" class="icon-2_1" alt="">
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/urhelp/index.html" class="category-link"><p>Юр.помощь</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container p-0">
+         <div class="footer d-flex justify-content-between col-12">
+           <div class="footer_item1 col-lg-6 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center">
+             <h2 class="align-self-start justify-content-center">Фонд Помощи Животным</h2>
+             <p class="align-self-start">2023 Ташкент, все права защищены.</p>
+             <p class="align-self-start">Desing by: Antares</p>
+             <p class="align-self-start">Иконки взяты с сайта icons8</p>
+           </div>
+           <div class="footer_item2 d-flex flex-column justify-content-center col-lg-3 col-md-4 col-sm-4">
+             <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
+             Шакирова Венера Г.
+             <a href="tel:+998981273776">+998 98 127 37 76</a>
+           </div>
+           <div class="footer_link d-flex col-lg-3 col-md-4 col-sm-5 align-items-center">
+             <div class="footer_link1 d-flex flex-column">
+               <a href="desk/poterya/index.html">Потеря</a>
+               <a href="desk/naideno/index.html">Найдено</a>
+               <a href="desk/klinika/index.html">Клиники</a>
+               <a href="desk/urhelp/index.html">Юр.помощь</a>
+             </div> 
+             <div class="footer_link2 d-flex flex-column">
+               <a href="personalpage/index.html">Кабинет</a>
+               <a href="autorization/index.html">Авторизация</a>
+             </div>
+           </div>
+         </div>
+        </div>
+      </footer>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/popper.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/js.js"></script>
+      <script src="https://kit.fontawesome.com/d204568966.js" crossorigin="anonymous"></script>
+</body>
+</html>

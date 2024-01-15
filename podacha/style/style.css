@@ -1,0 +1,485 @@
+@import 'fonts.css';
+
+body {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--dark);
+    text-decoration: none !important;
+    transition: color 300ms;
+}
+
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    }
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 15px;
+    border: solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+button:active, button:focus {
+	outline: none;
+}
+button::-moz-focus-inner {
+	border: 0;
+}
+/* ******************** */
+/* Root start */
+
+.p-0 {
+    padding: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+:root {
+    --white: #ffffff;
+    --gray: #f8f9f9;
+    --dark: #191919;
+    --mm500: 'MM';
+    --mm100: 'MT';
+    --nn400: 'NSR';
+    --moo400: 'MOL';
+}
+
+/* Root end */
+/* ******************** */
+
+/* ******************** */
+/* Header start */
+
+/* .header {
+    background-color: #191919;
+} */
+
+
+header {
+    background-color: #191919;
+}
+
+.header_main {
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.form-control {
+    margin-right: 20px;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 150px;   
+    text-align: start;
+  }
+  
+.dropdown {
+    display: inline-block;
+    margin: 5px 5px 5px 0px;
+}
+
+.dropdown-menu a:hover{
+  color: black;
+}
+
+.dropdown-toggle {
+    width: 150px;
+}
+
+.logo_text-1 {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2A9D8F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo_text-2 {
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2A9D8F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.searchbar {
+    margin-left: 30px;
+}
+
+/* Header End */ 
+/* ********************* */
+
+/* ********************* */
+/* Burger menu */
+
+.table_bordered {
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2A9D8F;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}  
+
+.table_bordered:hover {
+    color: white;
+}
+
+.navigation-link {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar:focus {
+    background-color: white;
+}
+
+.navigation-link:hover {
+    background: white;
+}
+
+.nav-link a{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.nav-link a:hover {
+    color: black;
+    background: gray;
+}
+
+.transparency {
+    width: 100%;
+    transition: 0.25s;
+}
+
+.collapse.show {
+    background-color: white; 
+  }
+
+.collapsing {
+    background-color: white;
+}
+
+.collapse {
+    background-color: white; 
+  }
+
+
+/* Header end */
+/* ********************* */
+
+/* ********************* */
+/* Main start */
+
+main {
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #F2F4F5;
+}
+
+.photo {
+  position: relative;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or object-fit: contain; depending on your preference */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.forma_podachi {
+  width: 100%;
+}
+
+.forma_podachi_info input {
+  margin-top: 50px;
+  padding: 15px;
+  width: 400px;
+}
+
+.forma_podachi_info .description {
+  height: 300px;
+  margin-bottom: 100px;
+}
+
+.forma_podachi_photo {
+  width: auto;
+  height: auto;
+  margin-top: 50px;
+}
+
+.forma_podachi_photo .photo_upload {
+  margin-top: 20px;
+}
+
+.forma_podachi_photo .submit {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.inputs input:last-of-type {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.colonki {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  row-gap: 80px;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+/* Main end */
+/* ******************** */
+
+/* ******************** */
+/* Footer start */
+
+footer {
+    background: black;
+    padding: 50px 0;
+    height: auto;
+    width: auto;
+}
+
+.footer_item1 h2 {
+    display: inline-block;
+    font-family: var(--mm500);
+    color: var(--white);
+    font-size: 18px;
+    line-height: 14px;
+    align-self: flex-start;
+}
+
+.footer_item1 p {
+    color: #e4e5da;
+    margin: 0;
+    text-align: justify;
+    font-size: 15px;
+    font-family: none;
+}
+
+.footer_item2 a {
+    color: #e4e5da;
+    text-decoration: none;
+}
+
+.footer_item2,
+.footer_link,
+.footer_link a {
+    color: #e4e5da;
+    text-decoration: none;
+    font-family: var(--nn400);
+}
+
+.footer a:hover {
+    color: gray;
+}
+
+/* Footer end */
+
+@media(min-width:320px) and (max-width:990px) {
+  .searchbar {
+      flex-direction: column;
+  }
+
+  .btn-outline-success {
+      margin-top: 15px;
+  }
+}
+
+
+@media(min-width:768px) and (max-width:9999px) {
+  .navigation-link {
+      display: none !important;
+  }
+
+  .column-category_sub {
+    flex-direction: column !important;
+  }
+}
+
+@media(min-width:320px) and (max-width:768px) {
+  .navigation-regular {
+      display: none !important;
+  }
+  
+  
+}
+
+@media(min-width:320px) and (max-width:768px) {
+  .advertisement-photo {
+    width: 100% !important;
+  }
+  
+  .main-information {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  input {
+    padding-top: 20px;
+    margin: 20px 0 20px 0;
+  }
+}
+
+@media(min-width:320px) and (max-width:1199px) {
+  .main-sub {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .main-information {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .advertisement-photo {
+    width: 100%;
+  }
+
+  .main-description {
+    flex-direction: column;
+  }
+
+  .main_description-first {
+    width: 100%;
+  }
+
+  .main_description-second {
+    width: 100%;
+  }
+
+  .desc_user {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .desc_map {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width:320px) and (max-width:580px) {    
+  .footer_item1,
+  .footer_item2 {
+      margin-bottom: 50px;
+  }
+
+  .footer {
+      flex-direction: column;
+  }
+}
+
+@media(min-width:0px) and (max-width:992px) {
+  .forma_podachi {
+    flex-direction: column;
+  }
+
+  .forma_podachi_photo {
+    margin-top: 0;
+  }
+
+  .forma_podachi_info .description {
+    margin-bottom: 20px;
+  }
+  
+  .buttonsubmit {
+    width: 150px;
+  }
+}
+
+@media(min-width:320px) and (max-width:430px) {
+  .forma_podachi_info input {
+    width: 300px;
+  }
+}
