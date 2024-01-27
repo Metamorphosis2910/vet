@@ -376,7 +376,7 @@ header {
 /* Main start */
 
 .main_background {
-    background: url(../img/IMG_20200802_003610.jpg) no-repeat center center /cover;
+    background: url(../img/back.jpg) no-repeat center center /cover;
     height: auto;
     min-height: 100vh;
 }
