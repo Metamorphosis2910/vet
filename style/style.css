@@ -280,6 +280,11 @@ header {
     box-shadow: 0px 0px 15px #45fcff;
  }
 
+ .submit-button a {
+    text-decoration: none;
+    color: white !important;
+ }
+
 .login-section a {
     color: white;
     font-size: 20px;
