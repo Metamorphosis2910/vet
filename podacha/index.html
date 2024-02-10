@@ -4,120 +4,308 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Объявление</title>
+    <title>Ветеринар</title>
+    <link rel="stylesheet" href="style/all.min.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css">    
 </head>
-<body>
-  <header class="header">
-    <div class="container">
-        <div class="header_main">
-            <div class="header_nav d-flex justify-content-between">
-                <div class="logo d-flex flex-column">
-                    <a href="../index.html">
-                        <p class="logo_text-1 m-0">ФПЖ</p>
-                        <p class="logo_text-2">Фонд помощи животным</p>
-                    </a>
-                </div>
-                <div class="navigation-regular d-flex align-items-center navbar-expand-xl">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
-                            Категории
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a href="../desk/poterya/index.html" class="table_bordered">Потеря</a></li>
-                          <li><a href="../desk/naideno/index.html" class="table_bordered">Найдено</a></li>
-                          <li><a href="../desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
-                        </ul>
-                      </div>
-                    <a href="../obyavlenie/index.html" class="table_bordered">Подать объявление</a>
-                    <li><a href="../autorization/index.html" class="table_bordered">Профиль</a></li>
-                    <form class="searchbar d-flex">
-                        <input class="form-control me-2" type="Поиск" placeholder="Поиск" aria-label="Поиск">
-                        <button class="btn btn-outline-success" type="submit">Поиск</button>
-                    </form>
-                </div> 
-            </div>
-            <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
-                <div class="navbar-expand-lg d-flex justify-content-start">
-                  <div class="transparency collapse"   id="navbarToggleExternalContent">
-                     <div class="nav-link d-flex flex-column text-center">          
-                        <a href="../index.html" class="table-bordered">На главную</a>
-                        <a href="../personalpage/index.html" class="table-bordered">Личный кабинет</a>
-                        <a href="../autorization/index.html" class="table-bordered">Авторизация</a>
-                        <a href="../desk/poterya/index.html" class="table-bordered">Потеря</a>
-                        <a href="../desk/naideno/index.html" class="table-bordered">Найдено</a>
-                        <a href="../desk/klinika/index.html" class="table-bordered">Вет. Клиники</a>
-                        <a href="../podacha/index.html" class="table-bordered">Подать объявление</a>
-                     </div>
-                  </div>
-               </div>
-                 <nav class="navbar d-flex justify-content-end">
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fas-sharp fa-solid fa-bars"></i></span>
-                   </button>
-                 </nav>
-              </div>
-        </div>
-    </div>
-</header>
-    <main class="main">
+
+<!-- <script type="text/javascript">
+    document.onkeydown = function(e) {
+    if(event.keyCode == 123) {
+    return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+    return false;
+    }
+    }
+</script>
+<script type="text/javascript">    
+    document.addEventListener("contextmenu", function (e){
+        e.preventDefault();
+    }, false);
+</script> -->
+<body style="overflow-x:hidden">
+    <header class="header">
         <div class="container">
-          <h3>Подача объявления</h3>
-          <div class="forma_podachi d-flex justify-content-between">
-              <div class="forma_podachi_info d-flex flex-column">
-                <input type="text" placeholder="Название объявления">
-                <input type="text" placeholder="Номер телефона">
-                <input type="text" placeholder="Адрес">
-                <input type="text" class="description" placeholder="Описание">
-              </div>
-              <div class="forma_podachi_photo d-flex flex-column">
-                <div class="colonki d-flex flex-column">
-                  <div id="gallery" class="gallery">
-                    <!-- Место для фотографий -->
+            <div class="header_main">
+                    <div class="navigation-regular d-flex align-items-center navbar-expand-xl justify-content-around">
+                        <div class="logo d-flex flex-column">
+                            <a href="../index.html">
+                                <img src="../img/Group_16384.png" alt="">
+                            </a>
+                        </div>  
+                        <div class="glavnaya">
+                            <a href="../index.html" id="glavnaya_a">Главная</a>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Категории</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                              <li><a href="../desk/poterya/index.html" class="table_bordered">Потеря</a></li>
+                              <li><a href="../desk/naideno/index.html" class="table_bordered">Найдено</a></li>
+                              <li><a href="../desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
+                            </ul>
+                          </div>
+                        <div class="input-group">
+                            <div class="form-outline" data-mdb-input-init>
+                              <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
+                            </div>
+                            <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                              <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block;" data-ignore="used only for top most containter width">
+                            <button class="submit-button">Подать объявление</button>
+                        </div>
+                        <div class="login-section d-flex align-items-center">
+                            <a href="">Войти</a>
+                            <div class="ellipse">
+                                <img src="../img/ph_user-bold.png" class="login-icon" alt="">
+                            </div>
+                        </div>
+                    </div> 
+                <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
+                    <div class="navbar-expand-lg d-flex justify-content-start">
+                      <div class="transparency collapse"   id="navbarToggleExternalContent">
+                         <div class="nav-link d-flex flex-column text-center">          
+                            <a href="../index.html" class="table-bordered">На главную</a>
+                            <a href="../personalpage/index.html" class="table-bordered">Личный кабинет</a>
+                            <a href="../autorization/index.html" class="table-bordered">Авторизация</a>
+                            <a href="../desk/poterya/index.html" class="table-bordered">Потеря</a>
+                            <a href="../desk/naideno/index.html" class="table-bordered">Найдено</a>
+                            <a href="../desk/klinika/index.html" class="table-bordered">Вет. Клиники</a>
+                            <a href="../podacha/index.html" class="table-bordered">Подать объявление</a>
+                         </div>
+                      </div>
+                   </div>
+                     <nav class="navbar d-flex justify-content-end">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fas-sharp fa-solid fa-bars"></i></span>
+                       </button>
+                     </nav>
                   </div>
-                  <input type="file" id="fileInput" accept="image/*">
-                  <p>Максимум 3 фотографии</p>
-                  <button onclick="" class="buttonsubmit">Подтвердить</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main_background d-flex align-items-center">
+            <div class="container">
+                <div class="main_text">
+                    <div class="main_text-sub"> 
+                        <div class="container d-flex flex-column align-items-center"> 
+                          <p class="advice_text-1 text-center">Создать объявление</p>
+                          <p class="advice_text-2 text-center">Выберите категорию</p>
+                            <div class="main_categories">
+                                <div class="column-category col-first d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/poterya/index.html" class="icon-a_1"><img src="../icons/Group 16407.png" class="icon-2" alt=""></a>
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/poterya/index.html" class="category-link"><p>Потеря</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-second d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/naideno/index.html" class="icon-a_1"><img src="../icons/Group 16409.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/naideno/index.html" class="category-link"><p>Найдено</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-third d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="desk/perederjka/index.html" class="icon-a_1"><img src="../icons/Group 16411.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="desk/perederjka/index.html" class="category-link"><p>Передержка</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-four d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/vigul/index.html" class="icon-a_1"><img src="../icons/Group 16413.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/vigul/index.html" class="category-link"><p>Выгул</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-five d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/klinika/index.html" class="icon-a_1"><img src="../icons/Group 16415.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/klinika/index.html" class="category-link"><p>Вет.Клиники</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-six d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/tovari/index.html" class="icon-a_1"><img src="../icons/Group 16408.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/tovari/index.html" class="category-link"><p>Товары</p></a>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="column-category col-seven d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/uslugi/index.html" class="icon-a_1"><img src="../icons/Group 16409.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/uslugi/index.html" class="category-link"><p>Услуги</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-eight d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/otdam/index.html" class="icon-a_1"><img src="../icons/Group 16412.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/otdam/index.html" class="category-link"><p>Отдам даром</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-nine d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/kuplya-prodaja/index.html" class="icon-a_1"><img src="../icons/Group 16414.png" class="icon-2" alt=""></a>
+                                            
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/kuplya-prodaja/index.html" class="category-link"><p>Купля-продажа</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-category col-ten d-flex flex-column align-items-center justify-content-center">
+                                    <div class="column-category_sub d-flex align-items-center">
+                                        <div class="column-2 category d-flex align-items-center justify-content-center">
+                                            <a href="../desk/urhelp/index.html" class="icon-a_1"><img src="../icons/Group 16416.png" class="icon-2" alt=""></a>
+                                        </div>
+                                        <div class="column-2_text">
+                                            <a href="../desk/urhelp/index.html" class="category-link"><p>Юр.помощь</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_advice">
+                              <input type="text" placeholder="Название объявления" class="advice_name">
+                              <div class="advice_info-upper d-flex">
+                                  <div class="advice_info-desc inputwrapper1" data-required="Максимум 320 символов" oninput="limitTextarea(this, 320)">
+                                      <textarea type="text" class="inputDataText" placeholder="Описание" onfocus="toggleAfter(this)" onblur="toggleAfter(this)"></textarea>
+                                  </div>
+                                  <div class="advice_info-dannie d-flex flex-column">
+                                      <textarea type="text" class="gorod" placeholder="Город, район" oninput="limitTextarea(this, 30)"></textarea>
+                                      <div class="inputwrapper2" data-required="+998 (xx) xxx - xx - xx">
+                                          <textarea id="demoTextBox" type="text" value="" class="inputDataText" placeholder="Номер телефона" onfocus="toggleAfter(this)" onblur="toggleAfter(this)" oninput="limitTextarea(this, 20)"></textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          </div>
-        </div>  
+            </div>
+        </div>
     </main>
     <footer>
-      <div class="container p-0">
-       <div class="footer d-flex justify-content-between col-12">
-         <div class="footer_item1 col-lg-6 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center">
-           <h2 class="align-self-start justify-content-center">Фонд Помощи Животным</h2>
-           <p class="align-self-start">2023 Ташкент, все права защищены.</p>
-           <p class="align-self-start">Desing by: Antares</p>
-           <p class="align-self-start">Иконки взяты с сайта icons8</p>
-         </div>
-         <div class="footer_item2 d-flex flex-column justify-content-center col-lg-3 col-md-4 col-sm-4">
-           <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
-           Шакирова Венера Г.
-           <a href="tel:+998981273776">+998 98 127 37 76</a>
-         </div>
-         <div class="footer_link d-flex col-lg-3 col-md-4 col-sm-5 align-items-center">
-           <div class="footer_link1 d-flex flex-column">
-             <a href="../desk/poterya/index.html">Потеря</a>
-             <a href="../desk/naideno/index.html">Найдено</a>
-             <a href="../desk/klinika/index.html">Клиники</a>
-             <a href="../desk/urhelp/index.html">Юр.помощь</a>
-           </div> 
-           <div class="footer_link2 d-flex flex-column">
-             <a href="../personalpage/index.html">Кабинет</a>
-             <a href="../autorization/index.html">Авторизация</a>
+        <div class="container p-0 d-flex flex-column justify-content-around">
+         <div class="footer d-flex justify-content-between ">
+           <div class="footer_item1">
+             <h2 class="align-self-start justify-content-center">Фонд Помощи Животным</h2>
+             <p class="align-self-start">Designed by: <span>Antares & Rusyaapp</span></p>
+           </div>
+           <div class="footer_link d-flex align-items-center">
+             <div class="footer_link1 d-flex flex-column">
+               <a href="../desk/poterya/index.html">Главная</a>
+               <a href="../desk/naideno/index.html">Категории</a>
+               <a href="../desk/klinika/index.html">Вопросы</a>
+               <a href="../desk/urhelp/index.html">Контакты</a>
+             </div> 
+             <div class="footer_link2 d-flex flex-column">
+               <a href="../personalpage/index.html">Регистрация</a>
+               <a href="../autorization/index.html">Вход в профиль</a>
+               <a href="">Локация</a>
+               <a href="">Помощь</a>
+             </div>
+           </div>
+           <div class="footer_item2 d-flex flex-column">
+             <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
+             <p>Шакирова Венера</p>
+             <a href="tel:+998981273776">+998(98) 127-37-76</a>
+             <div class="footer_icons d-flex justify-content-between">
+                <div class="footer_icons-1"><img src="../icons/TELEGRAM.png" alt=""></div>
+                <div class="footer_icons-2"><img src="../icons/INSTA.png" alt=""></div>
+                <div class="footer_icons-3"><img src="../icons/Vector.png" alt=""></div>
+             </div>
            </div>
          </div>
-       </div>
-      </div>
-    </footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/js.js"></script>
-    <script src="https://kit.fontawesome.com/d204568966.js" crossorigin="anonymous"></script>
+         <div class="outro d-flex justify-content-center align-content-end">
+            <p>© 2023 Ташкент, все права защищены.</p>
+         </div>
+        </div>
+      </footer>
+      <button type="button" class="btn-back-to-top" onclick="scrollToTop()">
+        <img src="../icons/Line 2.png" alt="">
+      </button>
+      
+      <script>
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      
+        window.addEventListener('scroll', function() {
+          var btnBackToTop = document.querySelector('.btn-back-to-top');
+          var mainContent = document.querySelector('main');
+          var footer = document.querySelector('footer');
+          var mainBottom = mainContent.getBoundingClientRect().bottom;
+      
+          if (window.scrollY > 20) {
+            btnBackToTop.style.display = 'block';
+          } else {
+            btnBackToTop.style.display = 'none';
+          }
+      
+          if (mainBottom <= window.innerHeight + 20) { // 20 - запас, чтобы кнопка не заходила на футер
+            btnBackToTop.style.bottom = mainBottom - window.innerHeight - 20 + 'px';
+          } else {
+            btnBackToTop.style.bottom = '20px';
+          }
+        });
+      </script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/popper.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/js.js"></script>
+      <script src="https://kit.fontawesome.com/d204568966.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -27,3 +27,8 @@
     font-family: 'MOL';
     src: url(../fonts/Mooli-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'MSR';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}

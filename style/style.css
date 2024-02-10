@@ -97,6 +97,7 @@ button::-moz-focus-inner {
     --mm600: 'MSB';
     --nn400: 'NSR';
     --moo400: 'MOL';
+    --mm400: 'MSR';
 }
 
 /* Root end */
@@ -142,7 +143,7 @@ header {
 .glavnaya a {
     position: relative;
     color: white;
-    padding: 6px 24px 6px 24px;
+    padding: 6px 24px 6px 27px;
     font-family: var(--mm600);
     font-size: 18px;
 }
@@ -158,14 +159,14 @@ header {
     transition: 0.5s;
 }
 
-.glavnaya a:hover::after {
-    left: 20%;
-    right: 20%;
+.glavnaya a::after {
+    left: 22%;
+    right: 18%;
     border-color: #02AAB0; /* Цвет границы при :hover */
     box-shadow: 0 0 10px white;
 }
 
-.dropdown::after {
+/* .dropdown::after {
     content: "";
     position: absolute;
 }
@@ -177,7 +178,7 @@ header {
     border: 1px solid #02AAB0;
     box-shadow: 0 0 10px white;
     transition: 0.5s;
-}
+} */
 
 .dropdown {
     display: inline-block;
@@ -239,15 +240,16 @@ header {
 }
 
 .form-outline input {
-    width: 225px;
+    width: 194px;
+    height: 35px;
     margin: 0;
     border-radius: 5px 0px 0px 5px;
     font-family: var(--mm500);
 }
 
 .btn-primary {
-    height: 38px;
-    border-radius: 0px 10px 10px 0px;
+    height: 35px;
+    border-radius: 0px 7px 7px 0px;
     background-color: #2A9D8F;
     border-color: #2A9D8F;
 }
@@ -399,6 +401,7 @@ header {
     border-radius: 55px;
     height: 600px;
     margin-bottom: 950px;
+    box-shadow:0 0 2px #fff;
 }
 
 .Text_FPJ {
@@ -491,7 +494,7 @@ header {
 }
 
 .category-link {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     height: 48px;
@@ -573,6 +576,18 @@ footer .container {
 .footer_item2 a {
     color: #e4e5da;
     text-decoration: none;
+    text-align: end;
+    font-size: 24px;
+    font-family: var(--mm500);
+    line-height: 28px;
+}
+
+.footer_item2 p {
+    color: #e4e5e4;
+    text-decoration: none;
+    text-align: end;
+    font-size: 23px;
+    font-family: var(--mm400);
 }
 
 .footer_link1 {
@@ -596,19 +611,19 @@ footer .container {
 }
 
 .outro {
-    font-size: 23px;
-    font-family: var(--mm500);
+    font-size: 22px;
+    font-family: var(--mm400);
     font-style: normal;
     line-height: normal;
-    font-weight: 500;
+    font-weight: 400;
     color: #FFF;
 }
 
 .footer_icons {
     width: 215px;
-    height: 43px;
+    height: auto;
     flex-shrink: 0;
-    margin-top: 21px;
+    margin-top: 10px;
 }
 
 /* Footer end */
