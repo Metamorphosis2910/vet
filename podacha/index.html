@@ -214,8 +214,8 @@
                                 </div>
                             </div>
                             <div class="main_advice">
-                              <input type="text" placeholder="Название объявления" class="advice_name">
-                              <div class="advice_info-upper d-flex">
+                                <input type="text" placeholder="Название объявления" class="advice_name">
+                                <div class="advice_info-upper d-flex">
                                   <div class="advice_info-desc inputwrapper1" data-required="Максимум 320 символов" oninput="limitTextarea(this, 320)">
                                       <textarea type="text" class="inputDataText" placeholder="Описание" onfocus="toggleAfter(this)" onblur="toggleAfter(this)"></textarea>
                                   </div>
@@ -225,7 +225,33 @@
                                           <textarea id="demoTextBox" type="text" value="" class="inputDataText" placeholder="Номер телефона" onfocus="toggleAfter(this)" onblur="toggleAfter(this)" oninput="limitTextarea(this, 20)"></textarea>
                                       </div>
                                   </div>
-                              </div>
+                                </div>
+                                <div class="photo_upload">
+                                    <div class="photo_cont-upper d-flex justify-content-between">
+                                        <div class="photo_cont d-flex flex-column justify-content-center align-items-center">
+                                            <img src="img/Vector.png" alt="">
+                                            <p>Главное фото</p>
+                                            <input type="file" style="display: none;" accept="image/*" onchange="displaySelectedPhoto(this)">
+                                        </div>
+                                        <div class="photo_cont d-flex flex-column justify-content-center align-items-center">
+                                            <img src="img/Vector.png" alt="">
+                                            <p>Фото</p>
+                                        </div>
+                                        <div class="photo_cont d-flex flex-column justify-content-center align-items-center">
+                                            <img src="img/Vector.png" alt="">
+                                            <p>Фото</p>
+                                        </div>
+                                        <div class="photo_cont d-flex flex-column justify-content-center align-items-center">
+                                            <img src="img/Vector.png" alt="">
+                                            <p>Фото</p>
+                                        </div>
+                                    </div>
+                                    <div class="button_submit d-flex justify-content-center">
+                                        <button>
+                                            <a href="">Подтвердить</a>
+                                        </button>
+                                    </div>        
+                                </div>
                           </div>
                         </div>
                     </div>
