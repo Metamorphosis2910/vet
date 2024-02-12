@@ -95,9 +95,11 @@ button::-moz-focus-inner {
     --mm100: 'MT';
     --mmB: 'MB' ;
     --mm600: 'MSB';
+    --mm600i: 'MSBItalic';
     --nn400: 'NSR';
     --moo400: 'MOL';
     --mm400: 'MSR';
+    --mm900: 'MSBlack';
 }
 
 /* Root end */
@@ -383,13 +385,69 @@ header {
 /* Main start */
 
 .main_background {
-    background: url(../img/back.jpg) no-repeat center center /cover;
     height: auto;
     min-height: 100vh;
+    background: url(../img/Group\ 16564.png);
+}
+
+.main_upper {
+    background: url(../img/Rectangle\ 201.jpg) no-repeat center /cover; 
+    width: 100%;
 }
 
 .main_background .container {
     max-width: 1320px;
+}
+
+
+.main_upper {
+    position: relative;
+    margin-top: 200px;
+}
+
+.main-text {
+    margin-top: 117px;
+    margin-bottom: 117px;
+    width: 660px;
+    max-height: 666px;
+}
+
+.main-text-photo {
+    z-index: 999;
+    position: relative;
+    top: 37px;
+}
+
+.main-text p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 40px;
+    font-family: var(--mm600i);
+
+}
+
+.main_upper-text {
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: var(--mm900);
+}
+
+.main_mid-text {
+    color: rgba(2, 220, 201, 1);
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: var(--mm900);
+}
+
+.main_down-text {
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: var(--mm900);
+}
+
+.main_categories-upper {
+    background: rgba(246, 246, 246, 1);
 }
 
 .main_text {
@@ -401,7 +459,6 @@ header {
 
 .main_text-sub {
     background-color: white;
-    background : rgba(200, 193, 193, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 55px;
     height: 600px;
@@ -489,10 +546,9 @@ header {
 }
 
 .column-2_text p {
-    color: #FFF;
-    text-shadow: 4px 2px 4px #2A9D8F;
+    color: rgba(77, 77, 77, 1);
     font-size: 18px;
-    font-family: var(--mm600);
+    font-family: var(--mm600i);
     font-weight: 600;
     font-style: normal;
     line-height: normal;
