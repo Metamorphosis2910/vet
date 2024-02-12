@@ -395,14 +395,16 @@ header {
     width: 100%;
 }
 
-.main_background .container {
-    max-width: 1320px;
+.main_upper-section {
+    max-width: 1920px;
+    margin-left: 237px;
+    align-items: center;
 }
 
 
 .main_upper {
     position: relative;
-    margin-top: 200px;
+    /* margin-top: 50px; */
 }
 
 .main-text {
@@ -415,7 +417,8 @@ header {
 .main-text-photo {
     z-index: 999;
     position: relative;
-    top: 37px;
+    top: 43px;
+    left: 95px;
 }
 
 .main-text p {
