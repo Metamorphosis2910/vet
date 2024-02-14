@@ -640,9 +640,11 @@ footer .container {
     color: #e4e5da;
     text-decoration: none;
     text-align: end;
-    font-size: 24px;
+    font-size: 23px;
     font-family: var(--mm500);
     line-height: 28px;
+    width: 212px;
+    align-self: flex-end;
 }
 
 .footer_item2 p {
@@ -651,6 +653,7 @@ footer .container {
     text-align: end;
     font-size: 23px;
     font-family: var(--mm400);
+    margin-bottom: 21px;
 }
 
 .footer_link1 {
@@ -686,7 +689,15 @@ footer .container {
     width: 215px;
     height: auto;
     flex-shrink: 0;
-    margin-top: 10px;
+    margin-top: 21px;
+    align-self: flex-end;
+}
+
+.footer_icons-1,
+.footer_icons-2,
+.footer_icons-3 {
+    width: 43px;
+    height: 43px;
 }
 
 /* Footer end */
