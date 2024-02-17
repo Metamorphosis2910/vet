@@ -117,18 +117,18 @@ header {
     height: 170px;
     display: flex;
     align-items: center;
-}
-
-.header_main {
-    padding-top: 23px;
-    padding-bottom: 23px;
-}
-
-.form-control {
+  }
+  
+  .header_main {
+    width: 1320px;
+    height: 90px;
+  }
+  
+  .form-control {
     margin-right: 20px;
-}
-
-.dropbtn {
+  }
+  
+  .dropbtn {
     background-color: white;
     color: black;
     padding: 16px;
@@ -138,17 +138,28 @@ header {
     width: 150px;   
     text-align: start;
   }
-
-
-.glavnaya a {
+  
+  
+  .dropdown .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+  }
+  
+  .navigation-regular .dropdown {
+    max-width: 109px;
+  }
+  
+  .glavnaya a {
     position: relative;
     color: white;
     padding: 6px 24px 6px 27px;
     font-family: var(--mm600);
     font-size: 18px;
-}
-
-.glavnaya a::after {
+  }
+  
+  .glavnaya a::after {
     content: "";
     position: absolute;
     left: 20%;
@@ -157,109 +168,109 @@ header {
     border: 1px solid transparent; /* Начальный цвет границы (прозрачный) */
     box-shadow: none; /* Начальная тень */
     transition: 0.5s;
-}
-
-.glavnaya a::after {
+  }
+  
+  .glavnaya a::after {
     left: 22%;
     right: 18%;
     border-color: #02AAB0; /* Цвет границы при :hover */
     box-shadow: 0 0 10px white;
-}
-
-/* .dropdown::after {
+  }
+  
+  /* .dropdown::after {
     content: "";
     position: absolute;
-}
-
-.dropdown:hover::after {
+  }
+  
+  .dropdown:hover::after {
     left: 10%;
     right: 10%;
     bottom: 0;
     border: 1px solid #02AAB0;
     box-shadow: 0 0 10px white;
     transition: 0.5s;
-} */
-
-.dropdown {
+  } */
+  
+  .dropdown {
     display: inline-block;
     margin: 5px 5px 5px 0px;
     font-style: var(--mm600);
-}
-
-.dropdown span {
+  }
+  
+  .dropdown span {
     font-family: var(--mm600);
     font-size: 18px;
-}
-
-.dropdown button {
+  }
+  
+  .dropdown button {
     background-color: transparent;
     border-style: none;
-}
-
-.dropdown button:hover {
+  }
+  
+  .dropdown button:hover {
     background-color: transparent;
     border-style: none;
-}
-
+  }
+  
     
-.dropdown-toggle {
+  .dropdown-toggle {
     width: 150px;
-}
-
-
-.btn-secondary:focus {
+  }
+  
+  
+  .btn-secondary:focus {
     background-color: transparent;
     border-color: transparent;
     box-shadow: none;
-}
-
-
-
-.logo_text-1 {
+  }
+  
+  
+  
+  .logo_text-1 {
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #2A9D8F;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-.logo_text-2 {
+  }
+  
+  .logo_text-2 {
     font-size: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #2A9D8F;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-.searchbar {
+  }
+  
+  .searchbar {
     margin-left: 30px;
-}
-
-.input-group {
+  }
+  
+  .input-group {
     width: auto;
-}
-
-.form-outline input {
+  }
+  
+  .form-outline input {
     width: 194px;
     height: 35px;
     margin: 0;
     border-radius: 5px 0px 0px 5px;
     font-family: var(--mm500);
-}
-
-.btn-primary {
+  }
+  
+  .btn-primary {
     height: 35px;
-    border-radius: 0px 7px 7px 0px;
+    border-radius: 0px 5px 5px 0px;
     background-color: #2A9D8F;
     border-color: #2A9D8F;
-}
-
-.btn-primary:hover {
+  }
+  
+  .btn-primary:hover {
     background-color:#2A9D8F;
     border-color: #2A9D8F;
-}
-
-.submit-button {
+  }
+  
+  .submit-button {
     margin-left: 62px;
     box-sizing: border-box;
     display: block;
@@ -278,22 +289,22 @@ header {
     border: none;
     border-radius: 30px;
     box-shadow: 0px 0px 15px #45fcff;
- }
-
-.submit-button a {
-  text-decoration: none;
-  color: white !important;
-}
-
-.login-section a {
+  }
+  
+  .submit-button a {
+    text-decoration: none;
+    color: white !important;
+  }
+  
+  .login-section a {
     color: white;
     font-size: 20px;
     font-family: var(--mm600);
     width: auto;
     margin-right: 20px;
-} 
-
-.ellipse {
+  } 
+  
+  .ellipse {
     position: relative;
     width: 70px;
     height: 70px;
@@ -309,9 +320,9 @@ header {
     width: 40px; 
     height: 40px; 
   }
-
-/* Header End */ 
-/* ********************* */
+  
+  /* Header End */ 
+  /* ********************* */
 
 /* ********************* */
 /* Burger menu */
