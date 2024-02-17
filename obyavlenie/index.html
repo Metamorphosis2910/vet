@@ -4,40 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Объявление</title>
+    <title>Объявления</title>
+    <link rel="stylesheet" href="style/all.min.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../pe-icon-7-stroke/css/pe-icon-7-stroke.css">
 </head>
-<body>
+<body overflow-x:hidden>
   <header class="header">
     <div class="container">
         <div class="header_main">
-            <div class="header_nav d-flex justify-content-between">
-                <div class="logo d-flex flex-column">
-                    <a href="../index.html">
-                        <p class="logo_text-1 m-0">ФПЖ</p>
-                        <p class="logo_text-2">Фонд помощи животным</p>
-                    </a>
-                </div>
-                <div class="navigation-regular d-flex align-items-center navbar-expand-xl">
+                <div class="navigation-regular d-flex align-items-center navbar-expand-xl justify-content-between">
+                    <div class="logo d-flex flex-column">
+                        <a href="../index.html">
+                            <img src="../img/Group_16384.png" alt="">
+                        </a>
+                    </div>  
+                    <div class="glavnaya">
+                        <a href="index.html" id="glavnaya_a">Главная</a>
+                    </div>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
-                            Категории
+                            <span>Категории</span>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
                           <li><a href="../desk/poterya/index.html" class="table_bordered">Потеря</a></li>
                           <li><a href="../desk/naideno/index.html" class="table_bordered">Найдено</a></li>
                           <li><a href="../desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
                         </ul>
                       </div>
-                    <a href="../obyavlenie/index.html" class="table_bordered">Подать объявление</a>
-                    <li><a href="../autorization/index.html" class="table_bordered">Профиль</a></li>
-                    <form class="searchbar d-flex">
-                        <input class="form-control me-2" type="Поиск" placeholder="Поиск" aria-label="Поиск">
-                        <button class="btn btn-outline-success" type="submit">Поиск</button>
-                    </form>
+                    <div class="input-group">
+                        <div class="form-outline" data-mdb-input-init>
+                          <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
+                        </div>
+                        <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                          <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div style="display: inline-block;" data-ignore="used only for top most containter width">
+                        <button class="submit-button"><a href="podacha/index.html">Подать объявление</a></button>
+                    </div>
+                    <div class="login-section d-flex align-items-center">
+                        <a href="">Войти</a>
+                        <div class="ellipse">
+                            <img src="../img/ph_user-bold.png" class="login-icon" alt="">
+                        </div>
+                    </div>
                 </div> 
-            </div>
             <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
                 <div class="navbar-expand-lg d-flex justify-content-start">
                   <div class="transparency collapse"   id="navbarToggleExternalContent">
@@ -62,139 +75,157 @@
     </div>
 </header>
     <main class="main">
-        <div class="container">
-            <div class="search d-flex">
-                <input type="text" class="input-place" placeholder="Много объявлений рядом">
-                <input type="text" class="input-place" placeholder="Ваш город">
-                <button type="submit" class="button-site">
-                    Поиск
-                </button>
+      <div class="main-background">
+        <div class="main-container container d-flex justify-content-center">
+          <div class="main_desk d-flex flex-column align-items-center">
+            <div class="main_desk-zagolovok ">
+              <p class="d-flex justify-content-center align-items-center">Потерялась собака похожая на кошку, вислоухая</p>
             </div>
-            <div class="main-sub d-flex justify-content-between">
-              <div class="advertisement-photo">
-                <div class="main_mid-slider d-flex align-items-center" id="testimonials">
-                  <div class="container">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="krug"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2" class="krug"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <div class="carousel-item-text d-flex flex-column align-items-center">
-                            <img data-enlargeable width="100" style="cursor: zoom-in" src="../img/IMG_20200802_003610.jpg" />
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="carousel-item-text d-flex flex-column align-items-center">
-                            <img data-enlargeable width="100" style="cursor: zoom-in" src="../img/1644900667_11-fikiwiki-com-p-kartinki-labradori-13.jpg" />
-                          </div>
-                        </div>
-                        <div class="carousel-item">
-                          <div class="carousel-item-text d-flex flex-column align-items-center">
-                            <img data-enlargeable width="100" style="cursor: zoom-in" src="../img/Group 1.jpg" />
-                          </div>
-                        </div>
-                      </div>
+            <div class="main_desk-info d-flex">
+              <div class="carousel-container d-flex justify-content-start">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../img/4a377131742682796fd8.jpg" class="d-block w-100" alt="...">
                     </div>
+                    <div class="carousel-item">
+                      <img src="../img/back.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../img/Group 1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>                   
+                  <div class="carousel_indicators-upper d-flex justify-content-center align-items-center">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <img src="../icons/Arrow 1.png" alt="">
+                    </a>
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"><p>1</p></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"><p>2</p></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"><p>3</p></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="3"><p>4</p></li>
+                    </ol>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <img src="../icons/Arrow 3.png" alt="">
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="main-information">
-                <div class="main-information-text">
-                  <p class="publication">
-                    Опубликовано: 6 сентября 2023 г.
-                  </p>
-                  <h1 class="description">
-                    Собака лабрадор
-                  </h1>
-                  <p class="p-info">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam beatae voluptatum molestiae, doloremque neque, odio quo adipisci sint corrupti fugiat corporis deserunt unde ipsa explicabo. Officiis, repudiandae molestiae maxime iure enim possimus eius, ratione praesentium eos dolores maiores id quaerat consectetur odit repellendus est doloribus fuga porro magni expedita.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="main-description d-flex justify-content-between">
-              <div class="main_description-first">
-                <div class="container">
-                  <h3 class="desc">ОПИСАНИЕ</h3>
-                  <p class="p-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptate repellendus ea non quod tempora est aperiam perspiciatis, provident beatae, incidunt, laborum dolores at accusamus. Quibusdam, alias nesciunt? Sit est corporis delectus sunt cupiditate cumque perspiciatis omnis, possimus quasi qui, quas quo, consequuntur incidunt culpa? Sapiente tempora libero doloribus natus.</p>
-                  <p class="p-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque aliquid alias harum dicta illo ducimus culpa ipsam et maiores, praesentium dolores officiis suscipit numquam a officia, laudantium tempore dolor mollitia optio earum ex ab. Eum laborum placeat voluptas alias illo error voluptatem dolor accusantium eius quibusdam ut, et quasi!</p>
-                </div>
-              </div>
-              <div class="main_description-second d-flex flex-column justify-content-between">
-                <div class="desc_user">
-                  <div class="container">
-                    <h4 class="user">Пользователь</h4>
-                    <div class="desc_user-info d-flex">
-                      <div class="desc_user-image">
-                        <img src="../icons/icons8-пользователь-64.png" alt="">
-                      </div>
-                      <div class="desc_user-name">
-                        <h4 class="desc_name">
-                          Ахад
-                        </h4>
-                        <div class="desc_name-first">
-                          На ФПЖ с 2019
-                        </div>
-                        <div class="desc_name-second">
-                          Номер телефона:
-                        </div>
-                      </div>                  
+              <div class="main_desk-info-text d-flex flex-column align-items-center justify-content-center">
+                <div class="main_desk-info-text-upper">
+                  <div class="info-pole1 info-pole d-flex">
+                    <div class="info-pole1-icon">
+                      <img src="../icons/Group 16532.png" alt="">
                     </div>
-                    <button class="button-site">
-                      <a href="tel:+998981273776">+998 93 777 77 77</a>
-                    </button>
+                    <div class="info-pole1-text d-flex align-items-center">
+                      <p>Абдуллаев Саидакбар Алишерович</p>
+                    </div>
                   </div>
-                </div>
-                <div class="desc_map">
-                  <div class="container">
-                    <h4 class="placement">Местоположение</h4>
-                    <div class="desc_map-sub d-flex">
-                      <div class="desc_map-place">
-                        <p>Ташкент, <span>Чиланзарский район, </span></p>
-                        <p>школа 178</p>
+                  <div class="info-pole2 info-pole d-flex align-items-center">
+                    <div class="info-pole2-icon">
+                      <img src="../icons/Group 16531.png" alt="">
+                    </div>
+                    <div class="info-pole2-text d-flex flex-column justify-content-center align-items-center">
+                      <div class="info-pole2-text1">
+                        <p>+998 (99) 999-99-99</p>
                       </div>
-                      <div class="desc_map-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d891.3041966608861!2d69.21329248411753!3d41.28758293019755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a36f78a43c1%3A0x48d0543d04e37ec7!2z0KjQutC-0LvQsCDihJYxNzg!5e0!3m2!1sru!2s!4v1694336670754!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      <div class="info-pole2-text2">
+                        <p>+998 (77) 777-77-77</p>
                       </div>
+                    </div>
+                  </div>
+                  <div class="info-pole3 info-pole">
+                    <div class="info-pole3-icon">
+                      <img src="../icons/Group 16530.png" alt="">
+                    </div>
+                    <div class="info-pole3-text">
+                      
+                    </div>
+                  </div>
+                  <div class="info-pole4 info-pole">
+                    <div class="info-pole4-icon">
+                      <img src="../icons/Group 16532.png" alt="">
+                    </div>
+                    <div class="info-pole4-text">
+                      
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </main>
     <footer>
-      <div class="container p-0">
-       <div class="footer d-flex justify-content-between col-12">
-         <div class="footer_item1 col-lg-6 col-md-4 col-sm-4 d-flex flex-column justify-content-center align-items-center">
+      <div class="container p-0 d-flex flex-column justify-content-around">
+       <div class="footer d-flex justify-content-between ">
+         <div class="footer_item1">
            <h2 class="align-self-start justify-content-center">Фонд Помощи Животным</h2>
-           <p class="align-self-start">2023 Ташкент, все права защищены.</p>
-           <p class="align-self-start">Desing by: Antares</p>
-           <p class="align-self-start">Иконки взяты с сайта icons8</p>
+           <p class="align-self-start">Designed by: <span>Antares & Rusyaapp</span></p>
          </div>
-         <div class="footer_item2 d-flex flex-column justify-content-center col-lg-3 col-md-4 col-sm-4">
-           <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
-           Шакирова Венера Г.
-           <a href="tel:+998981273776">+998 98 127 37 76</a>
-         </div>
-         <div class="footer_link d-flex col-lg-3 col-md-4 col-sm-5 align-items-center">
+         <div class="footer_link d-flex align-items-center">
            <div class="footer_link1 d-flex flex-column">
-             <a href="../desk/poterya/index.html">Потеря</a>
-             <a href="../desk/naideno/index.html">Найдено</a>
-             <a href="../desk/klinika/index.html">Клиники</a>
-             <a href="../desk/urhelp/index.html">Юр.помощь</a>
+             <a href="../desk/poterya/index.html">Главная</a>
+             <a href="../desk/naideno/index.html">Категории</a>
+             <a href="../desk/klinika/index.html">Вопросы</a>
+             <a href="../desk/urhelp/index.html">Контакты</a>
            </div> 
            <div class="footer_link2 d-flex flex-column">
-             <a href="../personalpage/index.html">Кабинет</a>
-             <a href="../autorization/index.html">Авторизация</a>
+             <a href="../personalpage/index.html">Регистрация</a>
+             <a href="../autorization/index.html">Вход в профиль</a>
+             <a href="">Локация</a>
+             <a href="">Помощь</a>
+           </div>
+         </div>
+         <div class="footer_item2 d-flex flex-column">
+           <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
+           <p>Шакирова Венера</p>
+           <a href="tel:+998981273776">+998(98) 127-37-76</a>
+           <div class="footer_icons d-flex justify-content-between">
+              <div class="footer_icons-1"><img src="../icons/TELEGRAM.png" alt=""><div class="icon_shadow"></div></div>
+              <div class="footer_icons-2"><img src="../icons/INSTA.png" alt=""><div class="icon_shadow"></div></div>
+              <div class="footer_icons-3"><img src="../icons/Vector.png" alt=""><div class="icon_shadow"></div></div>
            </div>
          </div>
        </div>
+       <div class="outro d-flex justify-content-center align-content-end">
+          <p>© 2023 Ташкент, все права защищены.</p>
+       </div>
       </div>
     </footer>
+    <button type="button" class="btn-back-to-top" onclick="scrollToTop()">
+      <img src="../icons/Line 2.png" alt="">
+    </button>
+    
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    
+      window.addEventListener('scroll', function() {
+        var btnBackToTop = document.querySelector('.btn-back-to-top');
+        var mainContent = document.querySelector('main');
+        var footer = document.querySelector('footer');
+        var mainBottom = mainContent.getBoundingClientRect().bottom;
+    
+        if (window.scrollY > 20) {
+          btnBackToTop.style.display = 'block';
+        } else {
+          btnBackToTop.style.display = 'none';
+        }
+    
+        if (mainBottom <= window.innerHeight + 20) { // 20 - запас, чтобы кнопка не заходила на футер
+          btnBackToTop.style.bottom = mainBottom - window.innerHeight - 20 + 'px';
+        } else {
+          btnBackToTop.style.bottom = '20px';
+        }
+      });
+    </script>
+    <script src="js/util.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>

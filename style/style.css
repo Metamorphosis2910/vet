@@ -122,8 +122,8 @@ header {
 }
 
 .header_main {
-    padding-top: 23px;
-    padding-bottom: 23px;
+    width: 1320px;
+    height: 90px;
 }
 
 .form-control {
@@ -141,6 +141,17 @@ header {
     text-align: start;
   }
 
+
+.dropdown .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+}
+
+.navigation-regular .dropdown {
+    max-width: 109px;
+  }
 
 .glavnaya a {
     position: relative;
@@ -251,7 +262,7 @@ header {
 
 .btn-primary {
     height: 35px;
-    border-radius: 0px 7px 7px 0px;
+    border-radius: 0px 5px 5px 0px;
     background-color: #2A9D8F;
     border-color: #2A9D8F;
 }
@@ -698,7 +709,20 @@ footer .container {
 .footer_icons-3 {
     width: 43px;
     height: 43px;
+    position: relative;
 }
+
+.icon_shadow {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+}
+
 
 /* Footer end */
 
