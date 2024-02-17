@@ -105,6 +105,7 @@ button::-moz-focus-inner {
 /* Root end */
 /* ******************** */
 
+/* ******************** */
 /* Header start */
 
 /* .header {
@@ -121,8 +122,8 @@ header {
 }
 
 .header_main {
-    padding-top: 23px;
-    padding-bottom: 23px;
+    width: 1320px;
+    height: 90px;
 }
 
 .form-control {
@@ -140,6 +141,17 @@ header {
     text-align: start;
   }
 
+
+.dropdown .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+}
+
+.navigation-regular .dropdown {
+    max-width: 109px;
+  }
 
 .glavnaya a {
     position: relative;
@@ -311,8 +323,6 @@ header {
     height: 40px; 
   }
 
-  
-
 /* Header End */ 
 /* ********************* */
 
@@ -406,7 +416,7 @@ main {
     border-radius: 50px;
     width: 1720px;
     height: 1909px;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(30px);
 }
 
 .main_desk-zagolovok {
@@ -452,7 +462,6 @@ main {
 
 .dropdown-toggle::after{
   font-size: var(--font-md);
-  margin-bottom: -2px;
 }
 
 .dropdown-menu li a.active{
@@ -633,10 +642,16 @@ main {
 
 .list_back {
     border-radius: 5px 0px 0px 5px;
+    background-color: rgba(238, 238, 238, 1);
 }
 
 .list_next {
     border-radius: 0px 5px 5px 0px;
+    background-color: rgba(238, 238, 238, 1);
+}
+
+.list_page {
+    background-color: rgba(252, 252, 252, 1);
 }
 
 /* Main end */
