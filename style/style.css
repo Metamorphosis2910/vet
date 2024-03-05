@@ -91,15 +91,16 @@ button::-moz-focus-inner {
     --white: #ffffff;
     --gray: #f8f9f9;
     --dark: #191919;
-    --mm500: 'MM';
     --mm100: 'MT';
+    --nn400: 'NSR';
+    --mm400: 'MSR';
+    --mm500: 'MM';
     --mmB: 'MB' ;
     --mm600: 'MSB';
     --mm600i: 'MSBItalic';
-    --nn400: 'NSR';
-    --moo400: 'MOL';
-    --mm400: 'MSR';
+    --mm700i: 'BoldItalic';
     --mm900: 'MSBlack';
+    --moo400: 'MOL';
 }
 
 /* Root end */
@@ -112,18 +113,23 @@ button::-moz-focus-inner {
     background-color: #191919;
 } */
 
-
-
 header {
     background-color: #191919;
-    height: 170px;
+    height: 128px;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.container_head {
+    max-width: 1320px;
+    width: 1320px;
+    
 }
 
 .header_main {
-    width: 1320px;
-    height: 90px;
+    width: 100%;
+    height: 68px;
 }
 
 .form-control {
@@ -152,6 +158,10 @@ header {
 .navigation-regular .dropdown {
     max-width: 109px;
   }
+
+.glavnaya {
+    display: flex;
+}
 
 .glavnaya a {
     position: relative;
@@ -199,6 +209,10 @@ header {
     font-style: var(--mm600);
 }
 
+.dropdown-toggle::after {
+    display: none;
+}
+
 .dropdown span {
     font-family: var(--mm600);
     font-size: 18px;
@@ -226,7 +240,15 @@ header {
     box-shadow: none;
 }
 
+.btn-secondary {
+    width: auto;
+    padding: 0;
+}
 
+.logo {
+    height: 68px;
+    width: 82px;
+}
 
 .logo_text-1 {
     font-size: 25px;
@@ -250,19 +272,20 @@ header {
 
 .input-group {
     width: auto;
+    margin-right: 60px;
 }
 
 .form-outline input {
     width: 194px;
     height: 35px;
     margin: 0;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 20px 0px 0px 20px;
     font-family: var(--mm500);
 }
 
 .btn-primary {
     height: 35px;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 20px 20px 0px;
     background-color: #2A9D8F;
     border-color: #2A9D8F;
 }
@@ -271,6 +294,7 @@ header {
     background-color:#2A9D8F;
     border-color: #2A9D8F;
 }
+
 
 .submit-button {
     margin-left: 62px;
@@ -293,9 +317,22 @@ header {
     box-shadow: 0px 0px 15px #45fcff;
  }
 
+.main-text .submit-button {
+    margin-left: 0;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+    font-family: var(--mmB);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    margin-top: 40px;
+}
+
+
  .submit-button a {
     text-decoration: none;
-    color: white !important;
+    color: rgba(78, 78, 78, 1) !important;
  }
 
 .login-section a {
@@ -402,13 +439,19 @@ header {
 }
 
 .main_upper {
-    background: url(../img/Rectangle\ 201.jpg) no-repeat center /cover; 
+    background: url(../img/ФОН\ С\ СОБАКОЙ.png) no-repeat center /cover; 
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main_upper .container {
+    max-width: 1320px;
 }
 
 .main_upper-section {
-    max-width: 1920px;
-    margin-left: 237px;
+    margin: 0;
+    padding: 0;
     align-items: center;
 }
 
@@ -419,8 +462,8 @@ header {
 }
 
 .main-text {
-    margin-top: 117px;
-    margin-bottom: 117px;
+    margin-top: 264px;
+    margin-bottom: 200px;
     width: 660px;
     max-height: 666px;
 }
@@ -434,7 +477,7 @@ header {
 
 .main-text p {
     color: rgba(255, 255, 255, 1);
-    font-size: 40px;
+    font-size: 30px;
     font-family: var(--mm600i);
 
 }
@@ -442,21 +485,21 @@ header {
 .main_upper-text {
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 60px;
     font-family: var(--mm900);
 }
 
 .main_mid-text {
     color: rgba(2, 220, 201, 1);
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 60px;
     font-family: var(--mm900);
 }
 
 .main_down-text {
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 60px;
     font-family: var(--mm900);
 }
 
@@ -468,23 +511,53 @@ header {
     box-shadow: border-box;
     width: auto;
     margin-top: 70px;
-    margin-bottom: 70px;
+}
+
+.main_mejdu-text {
+    font-family: var(--mm600);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.main_mejdu-text p {
+    margin: 0;
+}
+
+.main_bottom-button .submit-button {
+    background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);
+    box-shadow: 0;
+    text-shadow: 0;
+    width: 274px;
+    height: 50px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 85px;
+    box-shadow: none;
+    margin-bottom: 325px;
+}
+
+.main_bottom-button .submit-button_upper .submit-button a {
+    color: white !important;
 }
 
 .main_text-sub {
-    background-color: white;
+    width: 1920px;
+    background-color: rgba(246, 246, 246, 1);
     backdrop-filter: blur(10px);
     border-radius: 55px;
     height: 600px;
-    margin-bottom: 950px;
+    margin-bottom: 60px;
     box-shadow:0 0 2px #fff;
 }
 
 .Text_FPJ {
     text-align: center;
     color:rgba(255, 255, 255, 1);
-    
-    
 }
 
 #FPJ1 {
@@ -520,7 +593,6 @@ header {
     justify-content: space-around;
     align-items: center;
     padding-top: 120px;
-    padding-bottom: 120px;
 }
 
 .category {

@@ -112,18 +112,23 @@ button::-moz-focus-inner {
     background-color: #191919;
 } */
 
-
-
 header {
   background-color: #191919;
-  height: 170px;
+  height: 128px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.container_head {
+  max-width: 1320px;
+  width: 1320px;
+  
 }
 
 .header_main {
-  width: 1320px;
-  height: 90px;
+  width: 100%;
+  height: 68px;
 }
 
 .form-control {
@@ -151,6 +156,10 @@ header {
 
 .navigation-regular .dropdown {
   max-width: 109px;
+}
+
+.glavnaya {
+  display: flex;
 }
 
 .glavnaya a {
@@ -199,6 +208,10 @@ header {
   font-style: var(--mm600);
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 .dropdown span {
   font-family: var(--mm600);
   font-size: 18px;
@@ -226,7 +239,15 @@ header {
   box-shadow: none;
 }
 
+.btn-secondary {
+  width: auto;
+  padding: 0;
+}
 
+.logo {
+  height: 68px;
+  width: 82px;
+}
 
 .logo_text-1 {
   font-size: 25px;
@@ -250,19 +271,20 @@ header {
 
 .input-group {
   width: auto;
+  margin-right: 60px;
 }
 
 .form-outline input {
   width: 194px;
   height: 35px;
   margin: 0;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 20px 0px 0px 20px;
   font-family: var(--mm500);
 }
 
 .btn-primary {
   height: 35px;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 20px 20px 0px;
   background-color: #2A9D8F;
   border-color: #2A9D8F;
 }
@@ -271,6 +293,7 @@ header {
   background-color:#2A9D8F;
   border-color: #2A9D8F;
 }
+
 
 .submit-button {
   margin-left: 62px;
@@ -293,9 +316,22 @@ header {
   box-shadow: 0px 0px 15px #45fcff;
 }
 
+.main-text .submit-button {
+  margin-left: 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+  font-family: var(--mmB);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  margin-top: 40px;
+}
+
+
 .submit-button a {
   text-decoration: none;
-  color: white !important;
+  color: rgba(78, 78, 78, 1) !important;
 }
 
 .login-section a {
@@ -400,6 +436,7 @@ main {
 }
 
 .main-container {
+    padding: 0  ;
     min-width: 1720px !important;
     max-width: 1920px !important;
 }
@@ -407,14 +444,14 @@ main {
 .main-background {
     height: auto;
     min-height: 100vh;
-    background: url(../../img/IMG_20200802_003610\ —\ копия\ 3.png) center /cover;
-    padding-top: 93px;
+    background: url(../../img/Group\ 16683.png) center /cover;
+    margin-top: 120px;
 }
 
 .main_desk {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(246, 246, 246, 0.7);
     border-radius: 50px;
-    width: 1720px;
+    width: 100%;
     height: 1909px;
     backdrop-filter: blur(50px);
 }
@@ -422,21 +459,19 @@ main {
 .main_desk-zagolovok {
   width: 1320px;
   height: 77px;
-  margin-top: 227px;
-  
 }
 
 .main_desk-zagolovok p {
   margin: 0;
   width: auto;
   height: 100%;
-  border-radius: 10px ;
-  border: 1px solid rgba(34, 34, 34, 1);
-  font-family: var(--mm500);
+  border-radius: 30px 30px 0px 0px;
+  font-family: var(--mm600);
   font-size: 30px;
-  color: rgba(25, 25, 25, 1);
+  color: white;
   text-align: center;
-  background-color: rgba(252, 252, 252, 1);
+  background: rgba(42, 157, 143, 1);
+
 }
 
 .main_desk-info {
@@ -576,12 +611,47 @@ main {
   border: 1px solid rgba(34, 34, 34, 1);
 }
 
+.main_desk-info-text-upper {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
 .info-pole {
   margin-bottom: 40px;
 }
 
+.info-pole1-text {
+  margin-left: 20px;
+}
+
+.info-pole1-text p {
+  margin: 0 !important;
+  font-size: 24px;
+  font-family: var(--mm600);
+}
+
+.info-pole2-text1 {
+  margin-bottom: 20px;
+} 
+
+.info-pole2-text {
+  margin-left: 20px;
+}
+
 .info-pole2-text p {
   margin: 0;
+  font-size: 24px;
+  font-family: var(--mm600);
+}
+
+.info-pole3-text {
+  margin-left: 20px;
+}
+
+.info-pole3-text p{
+  margin: 0;
+  font-size: 24px;
+  font-family: var(--mm600);
 }
 
 

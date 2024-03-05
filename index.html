@@ -36,7 +36,7 @@
 
 <body style="overflow-x:hidden">
     <header class="header">
-        <div class="container">
+        <div class="container_head">
             <div class="header_main">
                     <div class="navigation-regular d-flex align-items-center navbar-expand-xl justify-content-between">
                         <div class="logo d-flex flex-column">
@@ -44,38 +44,39 @@
                                 <img src="img/Group_16384.png" alt="">
                             </a>
                         </div>  
-                        <div class="glavnaya">
-                            <a href="index.html" id="glavnaya_a">Главная</a>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span>Категории</span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                              <li><a href="desk/poterya/index.html" class="table_bordered">Потеря</a></li>
-                              <li><a href="desk/naideno/index.html" class="table_bordered">Найдено</a></li>
-                              <li><a href="desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
-                            </ul>
-                          </div>
-                        <div class="input-group">
-                            <div class="form-outline" data-mdb-input-init>
-                              <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
+                        <div class="header_buttons d-flex w-auto">
+                            <div class="glavnaya">
+                                <a href="index.html" id="glavnaya_a">Главная</a>
                             </div>
-                            <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-                              <i class="fas fa-search"></i>
-                            </button>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Категории</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                                  <li><a href="desk/poterya/index.html" class="table_bordered">Потеря</a></li>
+                                  <li><a href="desk/naideno/index.html" class="table_bordered">Найдено</a></li>
+                                  <li><a href="desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div style="display: inline-block;" data-ignore="used only for top most containter width">
-                            <button class="submit-button"><a href="podacha/index.html">Подать объявление</a></button>
-                        </div>
-                        <div class="login-section d-flex align-items-center">
-                            <a href="">Войти</a>
-                            <div class="ellipse">
-                                <img src="img/ph_user-bold.png" class="login-icon" alt="">
+                        <div class="search_login d-flex">
+                            <div class="input-group d-flex align-items-center">
+                                <div class="form-outline" data-mdb-input-init>
+                                  <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
+                                </div>
+                                <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                                  <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="login-section d-flex align-items-center">
+                                <a href="">Войти</a>
+                                <div class="ellipse">
+                                    <img src="img/ph_user-bold.png" class="login-icon" alt="">
+                                </div>
                             </div>
                         </div>
                     </div> 
-                <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
+                <!-- <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
                     <div class="navbar-expand-lg d-flex justify-content-start">
                       <div class="transparency collapse"   id="navbarToggleExternalContent">
                          <div class="nav-link d-flex flex-column text-center">          
@@ -94,7 +95,7 @@
                          <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fas-sharp fa-solid fa-bars"></i></span>
                        </button>
                      </nav>
-                  </div>
+                  </div> -->
             </div>
         </div>
     </header>
@@ -113,14 +114,16 @@
                             Животным
                         </h1>
                         <p>Мы помогаем людям найти их потерянных животных</p>
-                    </div>
-                    <div class="main-text-photo">
-                        <img src="img/beautiful-pet-portrait-of-dog 1.png" alt="">
+                        <div class="submit-button_upper" style="display: inline-block;" data-ignore="used only for top most containter width">
+                            <button class="submit-button"><a href="podacha/index.html">СМОТРЕТЬ КАТЕГОРИИ</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="main_text">
+            <div class="main_mejdu-text">
+                <p>Выберите категорию</p>
+            </div>
+            <div class="main_text">
                     <div class="main_text-sub"> 
                         <div class="container"> 
                             <div class="main_categories">
@@ -236,6 +239,10 @@
                             </div>
                         </div>
                     </div>
+            </div>
+            <div class="main_bottom-button">
+                <div class="submit-button_upper" style="display: inline-block;" data-ignore="used only for top most containter width">
+                    <button class="submit-button"><a href="podacha/index.html">СМОТРЕТЬ КАТЕГОРИИ</a></button>
                 </div>
             </div>
         </div>
@@ -276,7 +283,7 @@
             <p>© 2023 Ташкент, все права защищены.</p>
          </div>
         </div>
-      </footer>
+    </footer>
       <button type="button" class="btn-back-to-top" onclick="scrollToTop()">
         <img src="icons/Line 2.png" alt="">
       </button>
