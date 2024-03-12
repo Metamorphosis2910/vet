@@ -1,5 +1,9 @@
 @import 'fonts.css';
 
+html,body {
+    scroll-behavior: smooth;
+}
+
 * {
     text-decoration: none;
     list-style: none;
@@ -156,7 +160,7 @@ header {
 }
 
 .navigation-regular .dropdown {
-    max-width: 109px;
+    max-width: 120px;
   }
 
 .glavnaya {
@@ -213,7 +217,7 @@ header {
     display: none;
 }
 
-.dropdown span {
+.dropdown span:first-of-type {
     font-family: var(--mm600);
     font-size: 18px;
 }
@@ -232,7 +236,6 @@ header {
 .dropdown-toggle {
     width: 150px;
 }
-
 
 .btn-secondary:focus {
     background-color: transparent;
@@ -457,20 +460,17 @@ header {
 
 
 .main_upper {
-    position: relative;
+    height: 952px;
     /* margin-top: 50px; */
 }
 
 .main-text {
-    margin-top: 264px;
-    margin-bottom: 200px;
     width: 660px;
     max-height: 666px;
 }
 
 .main-text-photo {
     z-index: 999;
-    position: relative;
     top: 43px;
     left: 95px;
 }
@@ -543,6 +543,25 @@ header {
 
 .main_bottom-button .submit-button_upper .submit-button a {
     color: white !important;
+}
+
+.main-text .submit-button_upper {
+    margin-top: 40px;
+}
+
+.main-text .submit-button_upper a {
+    margin-left: 0;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+    font-family: var(--mmB);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    margin-top: 40px;
+    padding: 17px 48px;
+    border-radius: 30px;
+    margin-top: 40px;
 }
 
 .main_text-sub {

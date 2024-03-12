@@ -20,3 +20,16 @@
 //   }
 //   }
 
+/* ******************** */
+/* Скрипт изображения начало */
+
+    document.querySelectorAll('.carousel-item img').forEach(img =>{
+        img.onclick = () => {
+            document.querySelector('.carousel-pop_up').style.display = 'block';
+            document.querySelector('.carousel-pop_up img').src = img.getAttribute('src');
+        }
+    }); 
+
+    document.querySelector('.carousel-pop_up span').onclick = () => {
+        document.querySelector('.carousel-pop_up').style.display = 'none';
+    }

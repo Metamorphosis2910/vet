@@ -446,13 +446,13 @@ main {
     min-height: 100vh;
     background: url(../../img/Group\ 16683.png) center /cover;
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .main_desk {
     background: rgba(246, 246, 246, 0.7);
     border-radius: 50px;
     width: 100%;
-    height: 1909px;
     backdrop-filter: blur(50px);
 }
 
@@ -487,14 +487,14 @@ main {
   height: 650px;
   width: 650px;
   background: rgba(255, 255, 255, 1);
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 10px 10px;
   border: 1px solid rgba(34, 34, 34, 1);
 }
 
 #carouselExampleIndicators {
   width: auto;
   height: auto;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .carousel-inner {
@@ -515,6 +515,50 @@ main {
   max-width: 648px;
   max-height: 650px;
   border-radius: 10px 10px 0px 0px;
+  cursor: zoom-in;
+  transition: .5s;
+}
+
+.carousel-pop_up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+  z-index: 999;
+}
+
+.carousel-pop_up img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 8px;
+  width: 1200px;
+  height: auto;
+  max-height: 900px;
+}
+
+.carousel-pop_up span {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1);
 }
 
 .carousel-indicators {
@@ -568,6 +612,7 @@ main {
 }
 
 .carousel-indicators li {
+  position: relative;
   width: 34px;
   height: 34px;
   max-width: 34px;
@@ -587,13 +632,27 @@ main {
   transition: 0.5s;
 }
 
+.carousel-indicators li:hover p{
+  color: white;
+  transition: 0.5s;
+}
+
+#carouselExampleIndicators .active p {
+  color: white;
+}
+
 .carousel-indicators li p {
+  pointer-events: none;
   margin: 0;
   padding: 0;
   text-align: center;
   font-size: 12px;
   height: 100%;
   width: 100%;
+  position: absolute;
+  top: 9px;
+  left: 499px;
+  z-index: 1;
 }
 
 /* Carousel end */
@@ -607,7 +666,7 @@ main {
   width: 650px;
   height: 650px;
   background: rgba(255, 255, 255, 1);
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 10px 10px;
   border: 1px solid rgba(34, 34, 34, 1);
 }
 
@@ -618,6 +677,7 @@ main {
 
 .info-pole {
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .info-pole1-text {
@@ -654,6 +714,99 @@ main {
   font-family: var(--mm600);
 }
 
+.info-pole4-text {
+  margin-left: 20px;
+}
+
+.info-pole4-text1 p {
+  font-family: var(--mm600);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+  text-align: left;
+} 
+
+.info-pole4-text2 p {
+  margin: 0;
+  font-family: var(--mm500);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 431px;
+}
+
+.info-pole4 {
+  margin-bottom: 0;
+}
+
+.publish {
+  margin-top: 140px;
+}
+
+.publish p {
+  font-family: var(--mm500);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+  
+}
+
+.publish span {
+  font-family: var(--mm600);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.main_desk-description .main_desk-info-text {
+  margin: 0;
+  margin-top: 20px;
+  width: 1320px;
+  height: 490px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid rgba(34, 34, 34, 1);
+}
+
+.main_desk-description p:first-of-type{
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  font-family: var(--mm600);
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: 0em;
+}
+
+.main_desk-description p {
+  margin-left: 40px;
+  font-family: var(--mm500);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main_desk-info-container {
+  max-width: 1159px;
+  max-height: 297px;
+}
+
+#fullScreenModal img {
+  width: 100%;
+  height: auto;
+}
 
 /* Main Desc Info End */
 /* ******************** */

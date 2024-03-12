@@ -77,5 +77,51 @@ document.addEventListener('DOMContentLoaded', function () {
 /* *********** */
 /* Окончание скрипта textarea */
 /* *********** */    
-                         
+             
+/* *********** */
+/* Скрипт загрузки фото 1 */      
+/* *********** */   
+
+function handleImageUpload(index) {
+  var image = document.getElementById("upload" + index).files[0];
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+      var displayImage = document.getElementById("display-image" + index);
+      displayImage.src = e.target.result;
+      displayImage.style.marginBottom = "0";
+
+      // Show the close icon
+      document.getElementById("close-icon" + index).style.display = "inline";
+  }
+
+  reader.readAsDataURL(image);
+}
+
+function removeImage(index) {
+  var displayImage = document.getElementById("display-image" + index);
+  displayImage.src = "img/Vector.png";
+  displayImage.style.marginBottom = "20px";
+
+  // Hide the close icon
+  document.getElementById("close-icon" + index).style.display = "none";
+
+  // Clear the file input field
+  document.getElementById("upload" + index).value = "";
+}
+
+function showCloseIcon(index) {
+  var displayImage = document.getElementById("display-image" + index);
+  if (displayImage.src && !displayImage.src.endsWith("Vector.png")) {
+      document.getElementById("close-icon" + index).style.display = "inline";
+  }
+}
+
+function hideCloseIcon(index) {
+  document.getElementById("close-icon" + index).style.display = "none";
+}
+
+/* *********** */
+/* Скрипт загрузки фото 1 */      
+/* *********** */ 
 
