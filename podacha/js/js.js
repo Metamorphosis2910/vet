@@ -125,3 +125,12 @@ function hideCloseIcon(index) {
 /* Скрипт загрузки фото 1 */      
 /* *********** */ 
 
+document.getElementById('nav-toggle').addEventListener('change', function() {
+  if (this.checked) {
+      // Бургер-меню открыто, отключаем скролл
+      document.body.style.overflow = 'hidden';
+  } else {
+      // Бургер-меню закрыто, включаем скролл
+      document.body.style.overflow = '';
+  }
+});

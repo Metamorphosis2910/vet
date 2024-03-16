@@ -82,21 +82,86 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Начало бургер меню -->
                         <input type="checkbox" id="nav-toggle" hidden>
-                        <nav class="nav">
-                            <label for="nav-toggle" class="nav-toggle" onclick></label>
-                            <h2 class="logo"> 
-                                <a href="//dbmast.ru/">vet</a> 
-                            </h2>
-                            <ul>
-                                <li><a href="#1">Главная</a>
-                                <li><a href="#2">Категории</a>
-                                <li><a href="#3">Помощь</a>
-                                <li><a href="#4">Вопросы</a>
-                                <li><a href="#5">Локация</a>
-                                <li><a href="#6">Контакты</a> 
-                            </ul>
+                        <nav class="nav d-flex flex-column">
+                            <div class="nav_block">
+                                <label for="nav-toggle" class="nav-toggle" onclick></label>
+                            <div class="logo d-flex align-items-center"> 
+                                <div class="logo-image">
+                                    <img src="img/Group_16384.png" alt="">
+                                </div>
+                            </div>
+                            <div class="nav_main d-flex flex-column justify-content-center align-items-center">
+                                <div class="nav_auto-user d-flex flex-column justify-content-center align-items-center">
+                                    <div class="nav_auto-user-square d-flex flex-column justify-content-center align-items-center">
+                                        <img src="icons/Group 16382.png" alt="">
+                                        <p>Ахраров Али</p>
+                                        <button class="quit">Выход из аккаунта</button>
+                                    </div>
+                                    <a href="" class="d-flex justify-content-center align-items-center">Подать объявление</a>
+                                </div>
+                                <div class="input-group d-flex align-items-center justify-content-center">
+                                    <div class="form-outline" data-mdb-input-init>
+                                      <input type="search" placeholder="Поиск..." id="  " class="form-control" />
+                                    </div>
+                                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                                      <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <ul class="d-flex flex-column justify-content-center align-items-center">
+                                    <li><a href="#1">Главная</a>
+                                    <li><a href="#2">Категории</a>
+                                    <li><a href="#3">Помощь</a>
+                                    <li><a href="#4">Вопросы</a>
+                                    <li><a href="#5">Локация</a>
+                                    <li><a href="#6">Контакты</a> 
+                                </ul>
+                                <a class="d-flex justify-content-center align-items-center submit-button autoriz-button" href="autorization/index.html">Вход</a>
+                                <a href="registration/index.html" class="d-flex justify-content-center align-items-center regist-button">Регистрация</a>
+                                <footer>
+                                    <div class="container p-0 d-flex flex-column justify-content-around">
+                                     <div class="footer d-flex justify-content-between ">
+                                       <div class="footer_item1">
+                                         <h2 class="align-self-start justify-content-center">Фонд Помощи Животным</h2>
+                                         <p class="align-self-start">Designed by: <span>Antares & Rusyaapp</span></p>
+                                       </div>
+                                       <div class="footer_link d-flex align-items-center">
+                                         <div class="footer_link1 d-flex flex-column">
+                                           <a href="index.html">Главная</a>
+                                           <a href="desk/naideno/index.html">Категории</a>
+                                           <a href="desk/klinika/index.html">Вопросы</a>
+                                           <a href="desk/urhelp/index.html">Контакты</a>
+                                         </div> 
+                                         <div class="footer_link2 d-flex flex-column">
+                                           <a href="personalpage/index.html">Регистрация</a>
+                                           <a href="autorization/index.html">Вход в профиль</a>
+                                           <a href="">Локация</a>
+                                           <a href="">Помощь</a>
+                                         </div>
+                                       </div>
+                                       <div class="footer_item2 d-flex flex-column">
+                                         <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
+                                         <p>Шакирова Венера</p>
+                                         <a href="tel:+998981273776">+998(98) 127-37-76</a>
+                                         <p class="social">Мы в соц.сетях</p>
+                                         <div class="footer_icons d-flex justify-content-between">
+                                            <div class="footer_icons-1"><img src="icons/TELEGRAM.png" alt=""><div class="icon_shadow"></div></div>
+                                            <div class="footer_icons-2"><img src="icons/INSTA.png" alt=""><div class="icon_shadow"></div></div>
+                                            <div class="footer_icons-3"><img src="icons/Vector.png" alt=""><div class="icon_shadow"></div></div>
+                                         </div>
+                                       </div>
+                                     </div>
+                                     <p class="outro-design align-self-center">Designed by: <span>Antares & Rusyaapp</span></p>
+                                     <div class="outro d-flex justify-content-center align-content-end">
+                                        <p>© 2023 Ташкент, все права защищены.</p>
+                                     </div>
+                                    </div>
+                                </footer>
+                            </div>
+                            </div>
                         </nav>
+                        <!-- Конец бургер меню -->
                     </div> 
             </div>
         </div>
