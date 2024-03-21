@@ -1287,6 +1287,9 @@ footer .container {
 
 /* 480p to 768p */
 
+/* Копируется для других страниц */
+/* Мобильные свойства */
+
 @media(min-width:1023px) and (max-width:9999px) {        
     
     .nav {
@@ -1300,12 +1303,8 @@ footer .container {
     .social {
         display: none;
     }
-    
-    
-    
-    
-    
-    
+
+
     .mobile_categories {
         display: none;
     }
@@ -1314,6 +1313,13 @@ footer .container {
         display: none !important;
     }
 }
+
+/* Мобильные свойства */
+/* Копируется для других страниц */ 
+
+
+/* Копируется для других страниц */
+/* Мобильный хедер 480 - 768px */
 
 @media(min-width:480px) and (max-width:768px) {
     .header {
@@ -1380,8 +1386,9 @@ footer .container {
         margin-bottom: 50px;
         margin-top: 0 !important;
     }
-
-
+    
+    /* Мобильный хедер 480 - 768px */
+    /* Копируется для других страниц */
 
 
 
@@ -1477,17 +1484,8 @@ footer .container {
         display: none;
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    /* Копируется для других страниц */
+    /* Мобильный футер 480 - 768 px */
     footer {
         width: auto;
         height: 570px !important;
@@ -1624,8 +1622,13 @@ footer .container {
     }
 }
 
+/* Мобильный футер 480 - 768 px */
+/* Копируется для других страниц */
+
  
 /* 768p to 1024p */
+/* Копируется для других страниц */
+/* Мобильный хедер 768 - 1024 р */
 
 @media (min-width:768px) and (max-width:1024px) {
     header {
@@ -1640,6 +1643,10 @@ footer .container {
     .navigation-regular .search_login {
         display: none !important;
     }
+
+/* Мобильный хедер 768 - 1024 р */
+/* Копируется для других страниц */
+
     .main_text-sub {
         height: 280px;
         margin-bottom: 100px;
@@ -1817,6 +1824,9 @@ footer .container {
         display: none;
     }
 
+    /* Копируется для других страниц */
+    /* Мобильный футер 768 - 1024 р */
+
     footer {
         width: auto;
         height: 570px !important;
@@ -1953,8 +1963,449 @@ footer .container {
     }
 }
 
+/* Мобильный футер 768 - 1024 р */
+/* Копируется для других страниц */
+
 @media (min-width:768px) and (max-width:990px) {
     .input-group {
         margin-bottom: 25px !important;
+    }
+}
+
+
+
+@media (min-width:320px) and (max-width:480px) {
+
+    /* Копируется для других страниц */
+    /* Мобильный хедер 320р - 480р */
+
+    header {
+        height: 107px;
+        position: fixed;
+    }
+
+    .logo {
+        margin-left: 16px;
+        height: 47px;
+        width: 58px;
+    }   
+
+    .header_main {
+        display: flex;
+        align-items: center;
+    }
+
+    .header_buttons {
+        display: none !important;
+    }
+
+    .navigation-regular .search_login {
+        display: none !important;
+    }
+
+    /* Мобильное бургер меню 320р - 480р */
+    /* Копируется для других страниц */
+
+    .nav-toggle {
+        right: 330px;
+        top: 20px;
+    }
+
+    [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle {
+        right: 10px;
+    }
+
+    .nav_main .input-group {
+        height: 32px !important;
+        margin-top: 30px !important;
+    }
+
+    .nav_main .input-group .form-outline input {
+        width: 256px !important;
+        height: 32px;
+    }
+
+    .nav_main .input-group button {
+        width: 32px !important;
+        height: 32px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav_auto-user-square {
+        margin-top: 70px;
+    }
+
+    .nav_auto-user-square p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: var(--mm700i);
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+
+    .nav_auto-user-square button {
+        margin-bottom: 40px;
+        font-family: var(--mm600);
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #F67C7C;
+        background: none;
+        border-radius: none;
+        border: none;
+    }
+
+    .nav_auto-user a {
+        width: 228px;
+        height: 50px;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);   
+        color: white;
+        font-family: var(--mm600);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+
+    .autoriz-button {
+        width: 288px !important;
+    }
+
+    .regist-button {
+        width: 288px !important;
+    }
+
+    label .nav-toggle {
+        right: 50px !important;
+    }
+
+    .logo-image {
+        margin-left: 16px;
+    }
+
+    .nav .logo img {
+        width: 58px;
+        height: 47px;
+    }
+
+    .form-control {
+        width: 588px !important;
+    }
+
+    .nav_main footer {
+        height: 516px;
+    }
+
+    /* Мобильный хедер 320р - 480р */
+    /* Копируется для других страниц */
+
+    /* Копируется для других страниц */
+    /* Мобильный футер 320p - 480р */
+
+    footer {
+        width: auto;
+        height: 570px !important;
+    }
+
+    footer .container {
+        height: 570px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding-top: 0 !important;
+    }
+
+
+    .footer_item1 {
+        align-self: center;
+    }
+
+    .footer_item1 h2 {
+        font-family: var(--mm600);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .footer_link {
+        margin-bottom: 0;
+    }
+
+    .footer_item2 {
+        margin-bottom: 0;
+    }
+
+    .footer_item2 p {
+        align-self: center;
+        font-family: var(--mm400);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .footer_item2 a {
+        align-self: center;
+        font-family: var(--mm500);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center      ;
+    }
+
+    .footer_item2 .footer_icons {
+        align-self: center;
+    }
+    
+    .social {
+        margin-top: 60px !important;
+        font-family: var(--mm400);
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 30px !important;
+    }
+
+    .footer_icons {
+        margin-top: 0px;
+        margin-bottom: 60px;
+        width: 275px;
+    }
+
+    .footer_icons-1,
+    .footer_icons-2,
+    .footer_icons-3 {
+        width: 55px;
+        height: 55px;
+    }
+
+    .outro {
+        font-family: var(--mm500);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 40px !important;
+    }
+
+    .outro p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .outro-design {
+        font-family: var(--mm400);
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;      
+        color: rgba(255, 255, 255, 1);
+        margin-bottom: 20px !important;
+    }
+
+    .outro-design span{
+        font-family: var(--mm500);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .footer_item1 p {
+        display: none;
+    }
+
+    .footer_link1 {
+        display: none !important;
+    }
+
+    .footer_link2 {
+        display: none !important;
+    }
+
+    .footer_icons {
+        justify-content: space-around !important;
+    }
+
+    /* Мобильный футер 320p - 480р */
+    /* Копируется для других страниц */
+
+
+    /* Мобильный мейн 320р - 480р */
+
+    .main_background .input-group {
+        height: 32px !important;
+    }
+
+    .main_background .input-group .form-outline input {
+        width: 256px !important;
+        height: 32px;
+    }
+
+    .main_background .input-group button {
+        width: 32px !important;
+        height: 32px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input-group {
+        margin-top: 160px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .main_text-sub {
+        height: 280px;
+        margin-bottom: 100px;
+    }
+
+    .main_mejdu-text {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .main_mejdu-text p {
+        font-size: 20px;
+    }
+
+    .main_upper {
+        height: 212px;
+        width: 100%px;
+        background: url(../img/320p.png) center /cover no-repeat;
+        background-position: -100px;
+    }
+
+    .main_upper-text,
+    .main_mid-text,
+    .main_down-text {
+        font-size: 22px;
+    }
+
+    .main-text {
+        margin-top: 45px;
+        margin-left: 16px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .btn-back-to-top {
+        display: none !important;
+    }
+
+    .main-text {
+        width: auto;
+    }
+
+    .main-text p {
+        font-size: 12px;
+        width: 264px;
+        line-height: 14.63px;
+        width: 158px;
+        margin-bottom: 30px;
+    }
+
+    .main-text .submit-button_upper {
+        display: none !important;
+    }
+    
+    .glavnaya {
+        display: none;
+    }
+
+    .dropdown-head {
+        display: none;
+    }
+
+    .search_login {
+        display: none !important;
+    }
+
+    .pc_categories {
+        display: none;
+    }
+
+    .column-category {
+        margin-left: 20px;
+    }
+
+    .column-2_text p {
+        font-family: var(--mm700i);
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+    
+    .main_text {
+        margin-top: 0;
+    }
+
+    .main_text-sub {
+        width: auto;
+    }
+    
+    .main_bottom-button {
+        display: none;
+    }
+
+
+}
+
+
+@media (min-width:320px) and (max-width:380px) {
+    .main_upper {
+        background-position: -210px !important;
+    }
+}
+
+@media (min-width:381px) and (max-width:480px) {
+    .main_upper {
+        background-position: -180px;
+    }
+}
+
+@media (min-width:420px) and (max-width:480px) {
+    .main_upper {
+        background-position: -140px;
+    }
+}
+
+@media (min-width:440px) and (max-width:480px) {
+    .main_upper {
+        background-position: -100px;
     }
 }
