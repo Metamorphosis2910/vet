@@ -438,6 +438,7 @@ header {
 .nav-toggle:after {
     content: '\2630';
     text-decoration: none;
+    width: 330px;
 }
 
 .nav-toggle:hover {
@@ -525,7 +526,7 @@ header {
 .nav .logo {
     opacity: 0; /* Начальная непрозрачность блока */
     transform: translateX(-100%); /* Начальное смещение блока влево */
-    transition: opacity 1s ease, transform 1s ease; /* Плавное изменение непрозрачности и смещения */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавное изменение непрозрачности и смещения */
 }
 
 /* Стили, когда блок появляется */
@@ -844,7 +845,7 @@ header {
 }
 
 .main_upper {
-    background: url(../img/ФОН\ С\ СОБАКОЙ.png) no-repeat center /cover; 
+    background: url(../img/photo_2024-03-21_15-00-50.jpg) no-repeat center /cover; 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -902,11 +903,10 @@ header {
 .mobile_categories .column-category {
     width: auto;
     height: 279px;
+    margin: 0;
 }
 
 .mobile_categories .column-category_sub {
-    margin-top: 60px;
-    margin-bottom: 65px;
     width: 150px;
     height: 150px;
 }
@@ -1108,8 +1108,13 @@ header {
 }
 
 .column-2 {
-    width: auto;
-    height: auto;
+    width: 106px !important;
+    height: 106px !important;
+}
+
+.column-2 a img {
+    width: 106px !important; 
+    height: 106px !important;
 }
 
 .column-2_text {
@@ -1304,6 +1309,8 @@ footer .container {
         display: none;
     }
 
+/* Мобильные свойства */
+/* Копируется для других страниц */     
 
     .mobile_categories {
         display: none;
@@ -1314,8 +1321,7 @@ footer .container {
     }
 }
 
-/* Мобильные свойства */
-/* Копируется для других страниц */ 
+
 
 
 /* Копируется для других страниц */
@@ -1399,12 +1405,6 @@ footer .container {
 
     .main_mejdu-text {
         margin-top: 60px;
-    }
-
-    .main_upper {
-        height: 368px;
-        background: url(../img/mobiledog.png) center /cover no-repeat;
-        /* background-position: 150px; */
     }
 
     .main_upper-text,
@@ -2096,6 +2096,10 @@ footer .container {
         margin-left: 16px;
     }
 
+    .nav .logo {
+        height: 107px;
+    }
+
     .nav .logo img {
         width: 58px;
         height: 47px;
@@ -2407,5 +2411,21 @@ footer .container {
 @media (min-width:440px) and (max-width:480px) {
     .main_upper {
         background-position: -100px;
+    }
+}
+
+@media (min-width:480px) and (max-width:540px) {
+    .main_upper {
+        height: 368px;
+        background: url(../img/mobiledog.png) center /cover no-repeat;
+        background-position: -14px; 
+    }
+}
+
+@media (min-width:540px) and (max-width:640px) {
+    .main_upper {
+        height: 368px;
+        background: url(../img/mobiledog.png) center /cover no-repeat;
+        background-position: -14px; 
     }
 }
