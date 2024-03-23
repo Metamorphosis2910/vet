@@ -525,7 +525,7 @@ header {
 .nav .logo {
     opacity: 0; /* Начальная непрозрачность блока */
     transform: translateX(-100%); /* Начальное смещение блока влево */
-    transition: opacity 1s ease, transform 1s ease; /* Плавное изменение непрозрачности и смещения */
+    transition: opacity 1s ease, transform 0.1s ease; /* Плавное изменение непрозрачности и смещения */
 }
 
 /* Стили, когда блок появляется */
@@ -1171,7 +1171,7 @@ footer .container {
 /* Копируется для других страниц */
 /* Мобильные свойства */
 
-@media(min-width:1023px) and (max-width:9999px) {        
+@media(min-width:1025px) and (max-width:9999px) {        
     
     .nav {
         display: none !important;
@@ -1188,6 +1188,17 @@ footer .container {
 /* Мобильные свойства */
 /* Копируется для других страниц */  
 
+@media (min-width:320px) and (max-width:1024px) {
+    .header_buttons {
+        display: none !important;
+    }
+}
+
+@media(min-width:481px) and (max-width:1024px) {
+    .logo {
+        margin-left: 20px;
+    }
+}
 
 @media (min-width:320px) and (max-width:480px) {
 
@@ -1224,6 +1235,10 @@ footer .container {
     .nav-toggle {
         right: 330px;
         top: 20px;
+    }
+
+    .nav .logo {
+        height: 107px;
     }
 
     [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle {
@@ -1326,6 +1341,44 @@ footer .container {
 
     /* Мобильный хедер 320р - 480р */
     /* Копируется для других страниц */
+
+    /* Мобильный мейн 320р -480р */
+
+    .autorization {
+        width: 320px;
+    }
+
+    .input-container {
+        width: 288px;
+    }
+
+    .input-container input {
+        width: 288px;
+    }
+
+    .autoriz-button button {
+        width: 288px;
+        margin-left: 0;
+    }
+
+    .forgot {
+        font-size: 20px;
+    }
+
+    .no-acc {
+        font-size: 16px;
+    }
+
+    .no-acc span a{
+        font-size: 16px;
+    }
+
+    .input-aut::placeholder {
+        padding-left: 42px !important;
+        font-size: 16px;
+    }
+
+    /* Мобильный мейн 320p - 480p */
 
     /* Копируется для других страниц */
     /* Мобильный футер 320p - 480р */
@@ -1543,6 +1596,7 @@ footer .container {
         margin-bottom: 50px;
         margin-top: 0 !important;
     }
+
 
 /* Мобильный хедер 480 - 768px */
 /* Копируется для других страниц */

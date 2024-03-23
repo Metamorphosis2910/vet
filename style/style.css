@@ -526,7 +526,7 @@ header {
 .nav .logo {
     opacity: 0; /* Начальная непрозрачность блока */
     transform: translateX(-100%); /* Начальное смещение блока влево */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавное изменение непрозрачности и смещения */
+    transition: opacity 1s ease, transform 0.1s ease; /* Плавное изменение непрозрачности и смещения */
 }
 
 /* Стили, когда блок появляется */
@@ -845,7 +845,7 @@ header {
 }
 
 .main_upper {
-    background: url(../img/photo_2024-03-21_15-00-50.jpg) no-repeat center /cover; 
+    background: url(../img/ФОН\ С\ СОБАКОЙ.png) no-repeat center /cover; 
     width: 100%;
     display: flex;
     justify-content: center;
