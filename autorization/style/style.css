@@ -883,7 +883,7 @@ header {
 
 
 main {
-    background: url(../../img/BACKGROUND\ v2.png) center;
+    background: url(../../img/BACKGROUND\ v2.png) center /cover;
 }
 
 .main_text {
