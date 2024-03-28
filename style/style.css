@@ -2368,10 +2368,6 @@ footer .container {
         display: none;
     }
     
-    .btn-back-to-top {
-        display: none !important;
-    }
-
     .main-text {
         width: auto;
     }
@@ -2434,6 +2430,13 @@ footer .container {
 
 }
 
+
+@media (min-width:320px) and (max-width:768px) {
+    .btn-back-to-top {
+        display: none !important;
+    }
+
+}
 
 @media (min-width:320px) and (max-width:380px) {
     .main_upper {

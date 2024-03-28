@@ -102,6 +102,8 @@ button::-moz-focus-inner {
   --mm700i: 'BoldItalic';
   --mm900: 'MSBlack';
   --moo400: 'MOL';
+  --OS400: 'OpenSans400';
+  --OS600: 'OpenSans600';
 }
 
 
@@ -121,8 +123,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  z-index: 1999;
+  z-index: 999999;
 }
 
 .container_head {
@@ -1187,7 +1188,11 @@ textarea {
     border-radius: 10px;
     border: 2px solid rgba(42, 157, 143, 0.25);
     background-color: white;
-    
+    margin-left: 20px;
+}
+
+#photo_cont-main {
+  margin-left: 0;
 }
 
 .addfile {
@@ -1223,9 +1228,8 @@ textarea {
 .photo_cont img {
   max-width: 100%;
   margin-bottom: 20px;
-  margin-top: 10px;
   object-fit: cover;
-  max-height: 150px;
+  max-height: 200px;
 }
 
 .photo_cont p {
@@ -1242,6 +1246,29 @@ textarea {
 .photo_cont .image-container {
   position: relative;
   width: 100%;
+}
+
+  .photo_trio .image-container img,
+#display-image1 {
+  width: 100% !important; /* Занимать всю ширину родительского блока */
+  height: 100% !important; /* Занимать всю высоту родительского блока */
+  object-fit: cover !important; /* Растягивать изображение, чтобы оно полностью заполнило блок */
+}
+
+.photo_trio .image-container img[src$="Vector.png"],
+.photo_trio .image-container img[src$="mini_icon.png"],
+#display-image1[src$="Vector.png"],
+#display-image1[src$="mini_icon.png"] {
+  width: auto !important; /* Автоматический размер ширины */
+  height: auto !important; /* Автоматический размер высоты */
+  max-width: none !important; /* Убедиться, что максимальная ширина не ограничена */
+  max-height: none !important; /* Убедиться, что максимальная высота не ограничена */
+  margin: 0;
+}
+
+/* Применяем border-radius только к загруженному изображению */
+.loaded {
+  border-radius: 10px; /* Пример радиуса скругления */
 }
 
 .photo_cont .close-icon {
@@ -1276,8 +1303,6 @@ textarea {
 .photo_cont:hover .close-icon {
   display: inline;
 }
-
-
 
 .button_submit button{
     width: 274px;
@@ -1441,6 +1466,14 @@ footer .container {
   .social {
       display: none;
   }
+
+  .mobile-advice {
+    display: none;
+  }
+
+  .mobile_categories {
+    display: none !important;
+  }
 }
 /* Мобильные свойства */
 /* Копируется для других страниц */  
@@ -1449,7 +1482,13 @@ footer .container {
   .header_buttons {
       display: none !important;
   }
+
+  .main_categories {
+    display: none;
+  }
 }
+
+
 
 @media(min-width:481px) and (max-width:1024px) {
   .logo {
@@ -2137,3 +2176,281 @@ footer .container {
 
 /* Мобильный футер 768 - 1024 р */
 /* Копируется для других страниц */
+
+@media (min-width:320px) and (max-width:768px) {
+  .btn-back-to-top {
+      display: none !important;
+  }
+
+}
+
+
+/* Мейн 320р-480р */
+
+.main_text {
+  margin-top: 167px !important;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+  .advice_name {
+    width: 288px;
+    height: 35px;
+    background-color: #F4F4F4;
+    border-radius: 3px;
+    border: 2px none;
+    padding-left: 10px;
+    font-family: var(--OS600);
+    color:  rgba(63, 81, 83, 1) !important;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.07px;
+    text-align: left;
+  }
+  
+  .advice_text-upper {
+    display: none;
+  }
+
+  .mobile-advice {
+    font-family: var(--mmB);
+    color: #2A9D8F;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .advice_text-2 {
+    margin-bottom: 30px;
+    font-family: var(--mm500);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+
+  }
+
+  .main_background {
+    background: url(../img/pattern.png);
+  }
+
+ .main_text-sub {
+    width: auto !important;
+    background: transparent;
+    backdrop-filter: none;
+    margin-bottom: 100px !important;
+  } 
+
+  .advice_info-desc {
+    margin-bottom: 20px;
+  }
+
+  .advice_info-desc textarea {
+    width: 288px;
+    height: 135px;
+    background-color: #F4F4F4;
+    border-radius: 3px;
+    border: 2px none;
+    padding-left: 10px;
+    font-family: var(--OS400);
+    color: #3F5153;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    margin-right: 0;
+  }
+
+  .inputwrapper1::after {
+    width: 288px;
+    right: 0px;
+    height: 35px;
+    font-family: var(--mm400);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12.19px;
+    text-align: center;
+    background-color:#F4F4F4;
+    border-radius: 3px;
+    text-align: right;
+    padding: 0;
+    padding-top: 15px;
+    padding-right: 10px;
+  }
+
+  .image-container {
+    max-width: 288px;
+    max-height: 173px;
+  }
+
+  .photo_cont-upper {
+    flex-direction: column;
+  }
+
+  .photo_trio .photo_cont-upper:first-of-type .photo_cont {
+    margin-left: 0 !important;
+  }
+
+  .photo_trio .photo_cont {
+    margin-left: 6px;
+  }
+
+  .photo_cont {
+    width: 92px;
+    height: 70px;
+    border-radius: 3px;
+    border: none;
+    background-color: #F4F4F4;
+  }
+
+  #upload1 {
+    width: 288px;
+    height: 173px;
+  }
+
+  #photo_cont-main {
+    width: 288px;
+    height: 173px;
+  }
+
+  .photo_cont p {
+    font-family: var(--mm400);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    text-align: center;
+    color: #737373; 
+    margin-top: 4px;
+  }
+
+  .photo_cont-upper {
+    margin-bottom: 6px;
+  }
+  
+  .photo_cont #main_photo {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  #photo_cont-upper-main {
+    margin-bottom: 40px !important;
+  }
+
+  #display-image2,
+  #display-image3,
+  #display-image4 {
+    max-width: 92px;
+    max-height: 68px;
+  }
+
+  .addfile {
+    width: 92px;
+    height: 70px;
+  }
+
+  .gorod {
+    width: 288px !important;
+    height: 35px !important;
+    font-size: 14px !important;
+    background-color: #F4F4F4 !important;
+    border-radius: 3px !important;
+    border: 2px none !important;
+    padding: 0;
+    padding-left: 10px !important;
+    text-align: left;
+    padding-top: 8px;
+    font-family: var(--OS600) !important;
+    color: #3F5153;
+  }
+
+  #demoTextBox {
+    width: 288px !important;
+    height: 35px !important;
+    font-size: 14px !important;
+    background-color: #F4F4F4 !important;
+    border-radius: 3px !important;
+    border: 2px none !important;
+    padding: 0;
+    padding-left: 10px !important;
+    text-align: left;
+    padding-top: 8px;
+    font-family: var(--OS600) !important;
+    color: #3F5153;
+  }
+
+  .button_submit button {
+    margin-bottom: 0px;
+    width: 288px;
+    height: 40px;
+  }
+
+  .advice_info-upper {
+    flex-direction: column;
+  }
+}
+
+.photo_trio .image-container img {
+  display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .photo_trio .image-container img {
+      display: block;
+      content: url('../img/mini_icon.png');
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .photo_trio .image-container img {
+      display: block;
+      content: url('../img/Vector.png');
+  }
+}
+
+
+.mobile_categories {
+  display: flex;
+  width: 100%;
+  height: 276px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  background-color: #E9E9E9;
+  margin-bottom: 22px;
+}
+
+.mobile_categories .column-category {
+  width: auto;
+  height: 279px;
+  margin: 0;
+}
+
+.mobile_categories .column-category_sub {
+  width: 150px;
+  height: 150px;
+}
+
+.column-category_sub {
+  flex-direction: column;
+}
+
+.mobile_categories .column-category .column-category_sub .column-2{
+  position: relative; /* Добавляем позиционирование */
+  width: 150px;
+  height: 150px;
+}
+
+.column-shadow {
+  top: 0;
+  left: 23px;
+  width: 70%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  box-shadow: 0px 4px 15px 0px rgba(42, 157, 143, 1);
+}
+
+
+/* Мейн 320р-480р */

@@ -87,12 +87,53 @@ function handleImageUpload(index) {
   var reader = new FileReader();
 
   reader.onload = function (e) {
-      var displayImage = document.getElementById("display-image" + index);
-      displayImage.src = e.target.result;
-      displayImage.style.marginBottom = "0";
+    var displayImage = document.getElementById("display-image" + index);
+    displayImage.src = e.target.result;
+    displayImage.style.marginBottom = "0";
 
-      // Show the close icon
+    // Добавляем класс "loaded" после загрузки изображения
+    displayImage.classList.add("loaded");
+
+    // Show the close icon if image is loaded
+    if (image) {
       document.getElementById("close-icon" + index).style.display = "inline";
+    } else {
+      document.getElementById("close-icon" + index).style.display = "none";
+    }
+
+    // Hide the label "Главное фото" or "Фото"
+    var label = document.querySelector("#photo_cont-main p");
+    if (index !== 1) {
+      var labelIndex = index - 1;
+      label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
+    }
+    label.style.display = "none";
+
+    // Remove content property to display the uploaded image for the current image container
+    displayImage.style.content = "none";
+    // Add appropriate class to the image container to ensure correct icon display
+    var imageContainer = document.getElementById("display-image" + index).parentElement;
+    if (window.innerWidth >= 320 && window.innerWidth <= 768) {
+      imageContainer.classList.add("img-mini-icon");
+      imageContainer.classList.remove("img-vector");
+    } else {
+      imageContainer.classList.add("img-vector");
+      imageContainer.classList.remove("img-mini-icon");
+    }
+
+    // Add event listeners for hover effect and delete icon
+    displayImage.addEventListener("mouseover", function() {
+      displayImage.style.filter = "blur(5px)";
+      if (image) {
+        document.getElementById("close-icon" + index).style.display = "inline";
+      }
+    });
+    displayImage.addEventListener("mouseout", function() {
+      displayImage.style.filter = "none";
+      if (image) {
+        document.getElementById("close-icon" + index).style.display = "none";
+      }
+    });
   }
 
   reader.readAsDataURL(image);
@@ -103,23 +144,108 @@ function removeImage(index) {
   displayImage.src = "img/Vector.png";
   displayImage.style.marginBottom = "20px";
 
+  // Set the icon back to mini_icon.png if there is no uploaded image, but only in mobile view
+  var image = document.getElementById("upload" + index).files[0];
+  if (!image && window.innerWidth >= 320 && window.innerWidth <= 768) {
+    displayImage.parentElement.classList.remove("img-vector");
+    displayImage.parentElement.classList.add("img-mini-icon");
+  }
+
   // Hide the close icon
   document.getElementById("close-icon" + index).style.display = "none";
 
   // Clear the file input field
   document.getElementById("upload" + index).value = "";
+
+  // Show the label "Главное фото" or "Фото"
+  var label = document.querySelector("#photo_cont-main p");
+  if (index !== 1) {
+    var labelIndex = index - 1;
+    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
+  }
+  label.style.display = "block";
 }
 
 function showCloseIcon(index) {
-  var displayImage = document.getElementById("display-image" + index);
-  if (displayImage.src && !displayImage.src.endsWith("Vector.png")) {
-      document.getElementById("close-icon" + index).style.display = "inline";
+  var image = document.getElementById("upload" + index).files[0];
+  if (image) {
+    document.getElementById("close-icon" + index).style.display = "inline";
   }
 }
 
 function hideCloseIcon(index) {
   document.getElementById("close-icon" + index).style.display = "none";
 }
+
+function removeImage(index) {
+  var displayImage = document.getElementById("display-image" + index);
+  displayImage.src = "img/mini_icon.png"; // Устанавливаем src на mini_icon.png
+
+  // Hide the close icon
+  document.getElementById("close-icon" + index).style.display = "none";
+
+  // Clear the file input field
+  document.getElementById("upload" + index).value = "";
+
+  // Show the label "Главное фото" or "Фото"
+  var label = document.querySelector("#photo_cont-main p");
+  if (index !== 1) {
+    var labelIndex = index - 1;
+    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
+  }
+  label.style.display = "block";
+}
+
+function removeImage(index) {
+  var displayImage = document.getElementById("display-image" + index);
+  displayImage.src = "img/mini_icon.png"; // Устанавливаем src на mini_icon.png
+
+  // Удаляем класс loaded
+  displayImage.classList.remove("loaded");
+
+  // Hide the close icon
+  document.getElementById("close-icon" + index).style.display = "none";
+
+  // Clear the file input field
+  document.getElementById("upload" + index).value = "";
+
+  // Show the label "Главное фото" or "Фото"
+  var label = document.querySelector("#photo_cont-main p");
+  if (index !== 1) {
+    var labelIndex = index - 1;
+    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
+  }
+  label.style.display = "block";
+}
+
+function removeImage(index) {
+  var displayImage = document.getElementById("display-image" + index);
+  
+  // Устанавливаем src на mini_icon.png для мобильных устройств
+  if (window.innerWidth >= 320 && window.innerWidth <= 768) {
+    displayImage.src = "img/mini_icon.png"; 
+  } else {
+    displayImage.src = "img/Vector.png"; // Устанавливаем src на Vector.png для десктопов
+  }
+
+  // Удаляем класс loaded
+  displayImage.classList.remove("loaded");
+
+  // Hide the close icon
+  document.getElementById("close-icon" + index).style.display = "none";
+
+  // Clear the file input field
+  document.getElementById("upload" + index).value = "";
+
+  // Show the label "Главное фото" or "Фото"
+  var label = document.querySelector("#photo_cont-main p");
+  if (index !== 1) {
+    var labelIndex = index - 1;
+    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
+  }
+  label.style.display = "block";
+}
+
 
 /* *********** */
 /* Скрипт загрузки фото 1 */      
