@@ -238,6 +238,52 @@ header {
   width: 150px;
 }
 
+.dropdown-menu {
+  width: 235px;
+}
+
+.dropdown-menu li:first-of-type {
+  margin-top: 20px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 16px;
+}
+
+.dropdown-menu li:last-of-type::after {
+  display: none !important;
+}
+
+.dropdown-menu li{
+  position: relative;
+}
+
+.dropdown-menu li a {
+  color: #2A9D8F;
+  font-family: var(--mmB);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.dropdown-menu li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 206px;
+  bottom: -8px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+.dropdown-menu li::after {
+   border-color: #F3F3F3; 
+}
+
 .btn-secondary:focus {
   background-color: transparent;
   border-color: transparent;
@@ -834,14 +880,6 @@ header {
 /* ********************* */
 /* Burger menu */
 
-.table_bordered {
-    margin-left: 20px;
-    font-size: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #2A9D8F;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}  
 
 .table_bordered:hover {
     color: white;
