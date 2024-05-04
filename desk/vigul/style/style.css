@@ -1021,8 +1021,7 @@ main {
 }
 
 .dropdown-menu {
-    width: 100%;
-    transform: translate(0px, 50px) !important;
+    transform: translate(0px, 29px) !important;
 }
 
 .custom-toggle-arrow{
