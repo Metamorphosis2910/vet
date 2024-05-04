@@ -12,7 +12,7 @@
 </head>
 <body overflow-x:hidden>
   <header class="header">
-    <div class="container">
+    <div class="container_head">
         <div class="header_main">
                 <div class="navigation-regular d-flex align-items-center navbar-expand-xl justify-content-between">
                     <div class="logo d-flex flex-column">
@@ -20,57 +20,128 @@
                             <img src="../../img/Group_16384.png" alt="">
                         </a>
                     </div>  
-                    <div class="glavnaya">
-                        <a href="index.html" id="glavnaya_a">Главная</a>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span>Категории</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-                          <li><a href="../../desk/poterya/index.html" class="table_bordered">Потеря</a></li>
-                          <li><a href="../../desk/naideno/index.html" class="table_bordered">Найдено</a></li>
-                          <li><a href="../../desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
-                        </ul>
-                      </div>
-                    <div class="input-group">
-                        <div class="form-outline" data-mdb-input-init>
-                          <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
+                    <div class="header_buttons d-flex w-auto">
+                        <div class="glavnaya">
+                            <a href="../../index.html" id="glavnaya_a">Главная</a>
                         </div>
-                        <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-                          <i class="fas fa-search"></i>
-                        </button>
+                        <div class="dropdown dropdown-head">
+                            <button class="d-flex justify-content-center align-items-center btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Категории</span><span class="chevron"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                            <li><a href="../../desk/poterya/index.html" class="table_bordered">Потеря</a></li>
+                            <li><a href="../../desk/perederjka/" class="table_bordered">Передержка</a></li>
+                            <li><a href="../../desk/naideno/index.html" class="table_bordered">Найдено</a></li>
+                            <li><a href="../../desk/vigul/" class="table_bordered">Выгул</a></li>
+                            <li><a href="../../desk/klinika/index.html" class="table_bordered">Вет. Клиники</a></li>
+                            <li><a href="../../desk/tovari/" class="table_bordered">Товары</a></li>
+                            <li><a href="../../desk/uslugi/" class="table_bordered">Услуги</a></li>
+                            <li><a href="../../desk/otdam/" class="table_bordered">Отдам даром</a></li>
+                            <li><a href="../../desk/kuplya-prodaja/" class="table_bordered">Купля-продажа</a></li>
+                            <li><a href="../../desk/urhelp/" class="table_bordered">Юр.помощь</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div style="display: inline-block;" data-ignore="used only for top most containter width">
-                        <button class="submit-button"><a href="podacha/index.html">Подать объявление</a></button>
-                    </div>
-                    <div class="login-section d-flex align-items-center">
-                        <a href="">Войти</a>
-                        <div class="ellipse">
-                            <img src="../../img/ph_user-bold.png" class="login-icon" alt="">
+                    <div class="search_login d-flex">
+                        <div class="input-group d-flex align-items-center">
+                            <div class="form-outline" data-mdb-input-init>
+                            <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
+                            </div>
+                            <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                            <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="login-section d-flex align-items-center">
+                            <a href="">Войти</a>
+                            <div class="ellipse">
+                                <img src="../../img/ph_user-bold.png" class="login-icon" alt="">
+                            </div>
                         </div>
                     </div>
                 </div> 
-            <div class="navigation-link d-flex flex-column navbar-expand-lg position-fixed">
-                <div class="navbar-expand-lg d-flex justify-content-start">
-                  <div class="transparency collapse"   id="navbarToggleExternalContent">
-                     <div class="nav-link d-flex flex-column text-center">          
-                        <a href="../../index.html" class="table-bordered">На главную</a>
-                        <a href="../../personalpage/index.html" class="table-bordered">Личный кабинет</a>
-                        <a href="../../autorization/index.html" class="table-bordered">Авторизация</a>
-                        <a href="../../desk/poterya/index.html" class="table-bordered">Потеря</a>
-                        <a href="../../desk/naideno/index.html" class="table-bordered">Найдено</a>
-                        <a href="../../desk/klinika/index.html" class="table-bordered">Вет. Клиники</a>
-                        <a href="../../podacha/index.html" class="table-bordered">Подать объявление</a>
-                     </div>
-                  </div>
-               </div>
-                 <nav class="navbar d-flex justify-content-end">
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fas-sharp fa-solid fa-bars"></i></span>
-                   </button>
-                 </nav>
-              </div>
+                <!-- Начало бургер меню -->
+                <input type="checkbox" id="nav-toggle" hidden>
+                <nav class="nav d-flex flex-column">
+                    <div class="nav_block"> 
+                        <input type="checkbox" id="nav-toggle" hidden>
+                        <label for="nav-toggle" class="nav-toggle" onclick></label>
+                    <div class="logo d-flex align-items-center"> 
+                        <div class="logo-image">
+                            <img src="../../img/Group_16384.png" alt="">
+                        </div>
+                    </div>
+                    <div class="nav_main d-flex flex-column justify-content-center align-items-center">
+                        <div class="nav_auto-user d-flex flex-column justify-content-center align-items-center">
+                            <div class="nav_auto-user-square d-flex flex-column justify-content-center align-items-center">
+                                <img src="../../icons/Group 16382.png" alt="">
+                                <p>Ахраров Али</p>
+                                <button class="quit">Выход из аккаунта</button>
+                            </div>
+                            <a href="" class="d-flex justify-content-center align-items-center">Подать объявление</a>
+                        </div>
+                        <div class="input-group d-flex align-items-center justify-content-center">
+                            <div class="form-outline" data-mdb-input-init>
+                            <input type="search" placeholder="Поиск..." id="  " class="form-control" />
+                            </div>
+                            <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+                            <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <ul class="d-flex flex-column justify-content-center align-items-center">
+                            <li><a href="index.html">Главная</a>
+                            <li><a href="#2">Категории</a>
+                            <li><a href="#3">Помощь</a>
+                            <li><a href="#4">Вопросы</a>
+                            <li><a href="#5">Локация</a>
+                            <li><a href="#6">Контакты</a> 
+                        </ul>
+                        <a class="d-flex justify-content-center align-items-center submit-button autoriz-button" href="../autorization/index.html">Вход</a>
+                        <a href="../../registration/index.html" class="d-flex justify-content-center align-items-center regist-button">Регистрация</a>
+                        <footer>
+                            <div class="container p-0 d-flex flex-column justify-content-around">
+                            <div class="footer d-flex justify-content-between ">
+                            <div class="footer_item1">
+                                <h2 class="align-self-start justify-content-center">Фонд Помощи Животным</h2>
+                                <p class="align-self-start">Designed by: <span>Antares & Rusyaapp</span></p>
+                            </div>
+                            <div class="footer_link d-flex align-items-center">
+                                <div class="footer_link1 d-flex flex-column">
+                                <a href="../../index.html">Главная</a>
+                                <a href="../../desk/naideno/index.html">Категории</a>
+                                <a href="../../desk/klinika/index.html">Вопросы</a>
+                                <a href="../../desk/urhelp/index.html">Контакты</a>
+                                </div> 
+                                <div class="footer_link2 d-flex flex-column">
+                                <a href="../../personalpage/index.html">Регистрация</a>
+                                <a href="../../autorization/index.html">Вход в профиль</a>
+                                <a href="">Локация</a>
+                                <a href="">Помощь</a>
+                                </div>
+                            </div>
+                            <div class="footer_item2 d-flex flex-column">
+                                <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
+                                <p>Шакирова Венера</p>
+                                <a href="tel:+998981273776">+998(98) 127-37-76</a>
+                                <p class="social">Мы в соц.сетях</p>
+                                <div class="footer_icons d-flex justify-content-between">
+                                    <div class="footer_icons-1"><img src="../../icons/TELEGRAM.png" alt=""><div class="icon_shadow"></div></div>
+                                    <div class="footer_icons-2"><img src="../../icons/INSTA.png" alt=""><div class="icon_shadow"></div></div>
+                                    <div class="footer_icons-3"><img src="../../icons/Vector.png" alt=""><div class="icon_shadow"></div></div>
+                                </div>
+                            </div>
+                            </div>
+                            <p class="outro-design align-self-center">Designed by: <span>Antares & Rusyaapp</span></p>
+                            <div class="outro d-flex justify-content-center align-content-end">
+                                <p>© 2023 Ташкент, все права защищены.</p>
+                            </div>
+                            </div>
+                        </footer>
+                    </div>
+                    </div> 
+                </nav>
+                <div class="mask-content"></div>
+                <div class="overlay"></div>
+                <!-- Конец бургер меню -->
         </div>
     </div>
 </header>
@@ -79,7 +150,7 @@
         <div class="main-container container d-flex justify-content-center">
           <div class="main_desk d-flex flex-column  align-items-center">
             <div class="main_desk-zagolovok">
-                <h2>Список потерянных животных</h2>
+                <h2>Услуги для животных</h2>
             </div>
                   <div class="main_desk-zagolovok2 d-flex">
                     <div class="dropdown drop-1">
@@ -168,6 +239,9 @@
                         <i class="fas fa-search"></i>
                       </button>
                     </div>
+                    <button class="find d-flex justify-content-center align-items-center">
+                      <p>Найти</p>
+                    </button>
                   </div>
                     <div class="colonki">
                       <div class="colonka">
@@ -319,22 +393,23 @@
          </div>
          <div class="footer_link d-flex align-items-center">
            <div class="footer_link1 d-flex flex-column">
-             <a href="../../desk/poterya/index.html">Главная</a>
-             <a href="../../desk/naideno/index.html">Категории</a>
-             <a href="../../desk/klinika/index.html">Вопросы</a>
-             <a href="../../desk/urhelp/index.html">Контакты</a>
+             <a href="../../index.html">Главная</a>
+             <a href="../index.html#main_text-id">Категории</a>
+             <a href="">Вопросы</a>
+             <a href="https://t.me/Leha_2311">Контакты</a>
            </div> 
            <div class="footer_link2 d-flex flex-column">
-             <a href="../../personalpage/index.html">Регистрация</a>
+             <a href="../../registration/index.html">Регистрация</a>
              <a href="../../autorization/index.html">Вход в профиль</a>
              <a href="">Локация</a>
-             <a href="">Помощь</a>
+             <a href="mailto:aa972139@gmail.com">Помощь</a>
            </div>
          </div>
          <div class="footer_item2 d-flex flex-column">
            <!-- <a href="mailto:hello@pirolltheme.com"></a> -->
            <p>Шакирова Венера</p>
            <a href="tel:+998981273776">+998(98) 127-37-76</a>
+           <p class="social">Мы в соц.сетях</p>
            <div class="footer_icons d-flex justify-content-between">
               <div class="footer_icons-1"><img src="../../icons/TELEGRAM.png" alt=""><div class="icon_shadow"></div></div>
               <div class="footer_icons-2"><img src="../../icons/INSTA.png" alt=""><div class="icon_shadow"></div></div>
@@ -342,11 +417,15 @@
            </div>
          </div>
        </div>
+       <p class="outro-design align-self-center">Designed by: <span>Antares & Rusyaapp</span></p>
+       <div class="outro_designers">
+          <p>Designed by <span>Antares & Rusyaapp</span></p>
+       </div>
        <div class="outro d-flex justify-content-center align-content-end">
           <p>© 2023 Ташкент, все права защищены.</p>
        </div>
       </div>
-    </footer>
+  </footer>
     <button type="button" class="btn-back-to-top" onclick="scrollToTop()">
       <img src="../../icons/Line 2.png" alt="">
     </button>
@@ -378,11 +457,11 @@
         }
       });
     </script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/js.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/popper.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/js.js"></script>
     <script src="https://kit.fontawesome.com/d204568966.js" crossorigin="anonymous"></script>
 </body>
 </html>
