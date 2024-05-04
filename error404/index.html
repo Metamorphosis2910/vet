@@ -41,16 +41,20 @@
 </header>
 <main class="main d-flex justify-content-center align-items-center">
   <div class="main_info d-flex flex-column justify-content-center align-items-center">
-    <img src="../img/fluent_globe-error-24-regular.png" alt="">
-    <p class="error">ОШИБКА 404</p>
-    <p class="error2">что-то пошло не так, попробуйте обновить страницу</p>
-    <div class="buttons d-flex">
-      <div class="submit-button_upper d-flex justify-content-center" id="button1" style="display: inline-block;" data-ignore="used only for top most containter width">
-        <a class="" href="index.html">Обновить</a>
+    <img src="../img/error.png" alt="">
+    <p class="error">ОШИБКА</p>
+    <p class="error2">по вашему запросу ничего не найдено</p>
+    <div class="main_span d-flex flex-column align-items-center"><span>*Проверьте нет ли ошибок в запросе</span><span>*Попробуйте изменить ключевые слова</span></div>
+    <div class="input-group">
+      <div class="form-outline" data-mdb-input-init>
+        <input type="search" placeholder="Поиск..." id="form1" class="form-control" />
       </div>
-      <div class="submit-button_upper d-flex justify-content-center" id="button2" style="display: inline-block;" data-ignore="used only for top most containter width">
-        <a class="" href="../index.html">На главную</a>
-      </div>
+      <button type="button" class="btn btn-primary" data-mdb-ripple-init>
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    <div class="submit-button_upper d-flex justify-content-center" style="display: inline-block;" data-ignore="used only for top most containter width">
+      <a class="" href="../index.html">На главную</a>
     </div>
   </div>
 </main>

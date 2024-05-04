@@ -82,181 +82,242 @@ document.addEventListener('DOMContentLoaded', function () {
 /* Скрипт загрузки фото 1 */      
 /* *********** */   
 
+// function handleImageUpload(index) {
+//   var image = document.getElementById("upload" + index).files[0];
+//   var reader = new FileReader();
+
+//   reader.onload = function (e) {
+//     var displayImage = document.getElementById("display-image" + index);
+//     displayImage.src = e.target.result;
+//     displayImage.style.marginBottom = "0";
+//     displayImage.classList.add("loaded");
+
+//     if (image) {
+//       document.getElementById("close-icon" + index).style.display = "inline";
+//     } else {
+//       document.getElementById("close-icon" + index).style.display = "none";
+//     }
+
+//     var label = document.querySelector("#main_photo");
+//     if (index !== 1) {
+//       label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
+//     }
+//     label.style.display = "none";
+
+//     displayImage.style.content = "none";
+//     if (!image) return;
+
+//     if (displayImage.src.indexOf('mini_icon.png') === -1 && displayImage.src.indexOf('Vector.png') === -1) {
+//       displayImage.classList.add("blur");
+//     }
+//   };
+
+//   reader.readAsDataURL(image);
+
+//   var closeIcon = document.getElementById("close-icon" + index);
+//   closeIcon.addEventListener("mouseover", function() {
+//     var container = document.getElementById("display-image" + index).parentElement;
+//     container.classList.add("blur");
+//   });
+
+//   closeIcon.addEventListener("mouseout", function() {
+//     var container = document.getElementById("display-image" + index).parentElement;
+//     container.classList.remove("blur");
+//   });
+// }
+
+// function removeImage(index) {
+//   var displayImage = document.getElementById("display-image" + index);
+//   displayImage.src = "img/Vector.png";
+//   displayImage.style.marginBottom = "20px";
+//   displayImage.classList.remove("loaded", "blur");
+
+//   document.getElementById("close-icon" + index).style.display = "none";
+//   document.getElementById("upload" + index).value = "";
+
+//   var label = document.querySelector("#main_photo");
+//   if (index !== 1) {
+//     label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
+//   }
+//   label.style.display = "block";
+// }
+
+// function showCloseIcon(index) {
+//   var image = document.getElementById("upload" + index).files[0];
+//   if (image) {
+//     document.getElementById("close-icon" + index).style.display = "inline";
+//     document.getElementById("display-image" + index).classList.add("blur");
+//   }
+// }
+
+// function hideCloseIcon(index) {
+//   document.getElementById("close-icon" + index).style.display = "none";
+//   document.getElementById("display-image" + index).classList.remove("blur");
+// }
+
+
+// function handleImageUpload(index) {
+//   var image = document.getElementById("upload" + index).files[0];
+//   var reader = new FileReader();
+
+//   reader.onload = function (e) {
+//     var displayImage = document.getElementById("display-image" + index);
+//     displayImage.src = e.target.result;
+//     displayImage.style.marginBottom = "0";
+//     displayImage.classList.add("loaded");
+
+//     if (image) {
+//       document.getElementById("close-icon" + index).style.display = "inline";
+//     } else {
+//       document.getElementById("close-icon" + index).style.display = "none";
+//     }
+
+//     var label = document.querySelector("#main_photo");
+//     if (index !== 1) {
+//       label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
+//     }
+//     label.style.display = "none";
+
+//     displayImage.style.content = "none";
+//   };
+
+//   reader.readAsDataURL(image);
+
+//   var closeIcon = document.getElementById("close-icon" + index);
+//   closeIcon.addEventListener("mouseover", function() {
+//     var container = document.getElementById("display-image" + index).parentElement;
+//     container.classList.add("blur");
+//   });
+
+//   closeIcon.addEventListener("mouseout", function() {
+//     var container = document.getElementById("display-image" + index).parentElement;
+//     container.classList.remove("blur");
+//   });
+// }
+
+
+// /* *********** */
+// /* Скрипт загрузки фото 1 */      
+// /* *********** */ 
+
+// document.getElementById('nav-toggle').addEventListener('change', function() {
+//   if (this.checked) {
+//       // Бургер-меню открыто, отключаем скролл
+//       document.body.style.overflow = 'hidden';
+//   } else {
+//       // Бургер-меню закрыто, включаем скролл
+//       document.body.style.overflow = '';
+//   }
+// });
+
+// window.onload = function() {
+//   var screenWidth = window.innerWidth;
+//   var vectorImg = document.getElementById("vectorImg");
+
+//   // Проверяем, находится ли ширина экрана в диапазоне 768px-1024px
+//   if (screenWidth >= 768 && screenWidth <= 1024) {
+//       // Меняем источник изображения на изображение с названием "768px.png"
+//       vectorImg.src = "768px.png";
+//       vectorImg.alt = "768px Image"; // Опционально: изменяем альтернативный текст
+//   }
+// };
+
 function handleImageUpload(index) {
   var image = document.getElementById("upload" + index).files[0];
   var reader = new FileReader();
+  var displayImage = document.getElementById("display-image" + index);
+  var closeIcon = document.getElementById("close-icon" + index);
+  var label = document.querySelector("#main_photo");
+
+  if (index !== 1) {
+    label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
+  }
 
   reader.onload = function (e) {
-    var displayImage = document.getElementById("display-image" + index);
     displayImage.src = e.target.result;
     displayImage.style.marginBottom = "0";
-
-    // Добавляем класс "loaded" после загрузки изображения
     displayImage.classList.add("loaded");
-
-    // Show the close icon if image is loaded
-    if (image) {
-      document.getElementById("close-icon" + index).style.display = "inline";
-    } else {
-      document.getElementById("close-icon" + index).style.display = "none";
-    }
-
-    // Hide the label "Главное фото" or "Фото"
-    var label = document.querySelector("#photo_cont-main p");
-    if (index !== 1) {
-      var labelIndex = index - 1;
-      label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
-    }
     label.style.display = "none";
 
-    // Remove content property to display the uploaded image for the current image container
-    displayImage.style.content = "none";
-    // Add appropriate class to the image container to ensure correct icon display
-    var imageContainer = document.getElementById("display-image" + index).parentElement;
-    if (window.innerWidth >= 320 && window.innerWidth <= 768) {
-      imageContainer.classList.add("img-mini-icon");
-      imageContainer.classList.remove("img-vector");
+    if (image) {
+      closeIcon.style.display = "inline";
+      displayImage.parentElement.classList.add("blur");
+      document.getElementById("upload" + index).disabled = true; // Деактивируем input
     } else {
-      imageContainer.classList.add("img-vector");
-      imageContainer.classList.remove("img-mini-icon");
+      closeIcon.style.display = "none";
+      displayImage.parentElement.classList.remove("blur");
+      document.getElementById("upload" + index).disabled = false; // Активируем input
     }
-
-    // Add event listeners for hover effect and delete icon
-    displayImage.addEventListener("mouseover", function() {
-      displayImage.style.filter = "blur(5px)";
-      if (image) {
-        document.getElementById("close-icon" + index).style.display = "inline";
-      }
-    });
-    displayImage.addEventListener("mouseout", function() {
-      displayImage.style.filter = "none";
-      if (image) {
-        document.getElementById("close-icon" + index).style.display = "none";
-      }
-    });
-  }
+  };
 
   reader.readAsDataURL(image);
 }
 
 function removeImage(index) {
   var displayImage = document.getElementById("display-image" + index);
+  var closeIcon = document.getElementById("close-icon" + index);
+  var input = document.getElementById("upload" + index);
+  var label = document.querySelector("#main_photo");
+
+  if (index !== 1) {
+    label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
+  }
+
   displayImage.src = "img/Vector.png";
   displayImage.style.marginBottom = "20px";
-
-  // Set the icon back to mini_icon.png if there is no uploaded image, but only in mobile view
-  var image = document.getElementById("upload" + index).files[0];
-  if (!image && window.innerWidth >= 320 && window.innerWidth <= 768) {
-    displayImage.parentElement.classList.remove("img-vector");
-    displayImage.parentElement.classList.add("img-mini-icon");
-  }
-
-  // Hide the close icon
-  document.getElementById("close-icon" + index).style.display = "none";
-
-  // Clear the file input field
-  document.getElementById("upload" + index).value = "";
-
-  // Show the label "Главное фото" or "Фото"
-  var label = document.querySelector("#photo_cont-main p");
-  if (index !== 1) {
-    var labelIndex = index - 1;
-    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
-  }
+  displayImage.classList.remove("loaded");
+  closeIcon.style.display = "none";
+  input.value = "";
   label.style.display = "block";
+  displayImage.parentElement.classList.remove("blur");
+  input.disabled = false; // Активируем input при удалении изображения
 }
 
 function showCloseIcon(index) {
   var image = document.getElementById("upload" + index).files[0];
+  var closeIcon = document.getElementById("close-icon" + index);
+  var displayImage = document.getElementById("display-image" + index);
+
   if (image) {
-    document.getElementById("close-icon" + index).style.display = "inline";
+    closeIcon.style.display = "inline";
+    displayImage.parentElement.classList.add("blur");
   }
 }
 
 function hideCloseIcon(index) {
-  document.getElementById("close-icon" + index).style.display = "none";
+  var closeIcon = document.getElementById("close-icon" + index);
+  var displayImage = document.getElementById("display-image" + index);
+
+  closeIcon.style.display = "none";
+  displayImage.parentElement.classList.remove("blur");
 }
 
-function removeImage(index) {
-  var displayImage = document.getElementById("display-image" + index);
-  displayImage.src = "img/mini_icon.png"; // Устанавливаем src на mini_icon.png
-
-  // Hide the close icon
-  document.getElementById("close-icon" + index).style.display = "none";
-
-  // Clear the file input field
-  document.getElementById("upload" + index).value = "";
-
-  // Show the label "Главное фото" or "Фото"
-  var label = document.querySelector("#photo_cont-main p");
-  if (index !== 1) {
-    var labelIndex = index - 1;
-    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
-  }
-  label.style.display = "block";
-}
-
-function removeImage(index) {
-  var displayImage = document.getElementById("display-image" + index);
-  displayImage.src = "img/mini_icon.png"; // Устанавливаем src на mini_icon.png
-
-  // Удаляем класс loaded
-  displayImage.classList.remove("loaded");
-
-  // Hide the close icon
-  document.getElementById("close-icon" + index).style.display = "none";
-
-  // Clear the file input field
-  document.getElementById("upload" + index).value = "";
-
-  // Show the label "Главное фото" or "Фото"
-  var label = document.querySelector("#photo_cont-main p");
-  if (index !== 1) {
-    var labelIndex = index - 1;
-    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
-  }
-  label.style.display = "block";
-}
-
-function removeImage(index) {
-  var displayImage = document.getElementById("display-image" + index);
+document.addEventListener("DOMContentLoaded", function() {
+  var icons = document.querySelectorAll(".close-icon");
   
-  // Устанавливаем src на mini_icon.png для мобильных устройств
-  if (window.innerWidth >= 320 && window.innerWidth <= 768) {
-    displayImage.src = "img/mini_icon.png"; 
-  } else {
-    displayImage.src = "img/Vector.png"; // Устанавливаем src на Vector.png для десктопов
-  }
+  icons.forEach(function(icon) {
+    icon.addEventListener("mouseover", function() {
+      var container = this.parentElement.querySelector(".image-container");
+      container.classList.add("blur");
+    });
 
-  // Удаляем класс loaded
-  displayImage.classList.remove("loaded");
+    icon.addEventListener("mouseout", function() {
+      var container = this.parentElement.querySelector(".image-container");
+      container.classList.remove("blur");
+    });
+  });
 
-  // Hide the close icon
-  document.getElementById("close-icon" + index).style.display = "none";
-
-  // Clear the file input field
-  document.getElementById("upload" + index).value = "";
-
-  // Show the label "Главное фото" or "Фото"
-  var label = document.querySelector("#photo_cont-main p");
-  if (index !== 1) {
-    var labelIndex = index - 1;
-    label = document.querySelectorAll(".photo_cont-upper p")[labelIndex];
-  }
-  label.style.display = "block";
-}
-
-
-/* *********** */
-/* Скрипт загрузки фото 1 */      
-/* *********** */ 
-
-document.getElementById('nav-toggle').addEventListener('change', function() {
-  if (this.checked) {
-      // Бургер-меню открыто, отключаем скролл
-      document.body.style.overflow = 'hidden';
-  } else {
-      // Бургер-меню закрыто, включаем скролл
-      document.body.style.overflow = '';
-  }
+  var images = document.querySelectorAll(".image-container img");
+  
+  images.forEach(function(img) {
+    img.addEventListener("click", function() {
+      this.parentElement.classList.add("blur");
+      var closeIcon = this.parentElement.querySelector(".close-icon");
+      if (closeIcon) {
+        closeIcon.style.display = "inline";
+      }
+    });
+  });
 });
+
+

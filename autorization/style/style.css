@@ -437,10 +437,11 @@ header {
     /* плавный переход смещения панели */
     -webkit-transition: right 0.5s;
     -moz-transition: right 0.5s;
-    transition: right 0.5s;
+    transition: right 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     /* определяем цвет фона панели */;
     /* поверх других элементов */
     z-index: 2000;
+    scrollbar-width: none;
 }
 
 /**
@@ -499,7 +500,7 @@ header {
 [id='nav-toggle']:checked ~ .nav > .nav_block >  .nav-toggle {
     left: auto;
     right: 1px;
-    top: 21px;
+    top: 25px;
     background: inherit;
 }
 
@@ -512,6 +513,7 @@ header {
     -moz-box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
     -webkit-box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
 [id='nav-toggle']:checked ~ main > article {
@@ -534,7 +536,6 @@ header {
     html,
     body {
       margin: 0;
-      overflow-x: hidden;
     }
 }
 
@@ -542,7 +543,6 @@ header {
     html,
     body {
       margin: 0;
-      overflow-x: hidden;
     }
     .nav {
       width: 100%;
@@ -610,7 +610,7 @@ header {
 
 .nav_main {
     background: white;
-    background-image: url(../img/Group\ 16683.png);
+    background-image: url(../../img/Group\ 16683.png);
     height: auto;
 }
 
@@ -866,13 +866,87 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 [id='nav-toggle']:checked ~ .mask-content {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity .5s, visibility .5s;
-    transition: opacity .5s, visibility .5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+[id='nav-toggle']:checked ~ .mask-content {
+    animation: fadeIn 0.5s forwards;
+}
+
+[id='nav-toggle']:not(:checked) ~ .mask-content {
+    animation: fadeOut 0.5s forwards;
+}
+
+
+
+.nav_block:disabled {
+    display: none;
+}
+
+ .nav_auto-user a {
+    width: 100%;
+    min-width: 251px;
+    height: 40px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);
+    color: white;
+    font-family: var(--mm600);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.5px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: 0;
+}
+
+.quit {
+    font-family: var(--mm600);
+font-size: 16px;
+font-style: italic;
+font-weight: 600;
+line-height: 19.5px;
+text-align: center;
+border: 0;
+background: inherit;
+color: #F67C7C;
+margin-bottom: 10px;
+}
+
+.nav_auto-user-square p{
+    font-family: var(--mmB);
+font-size: 18px;
+font-style: italic;
+font-weight: 700;
+line-height: 21.94px;
+text-align: center;
+margin-top: 10px;
 }
 
 /* Header end */
@@ -883,7 +957,7 @@ header {
 
 
 main {
-    background: url(../../img/BACKGROUND\ v2.png) center /cover;
+    background: url(../../img/back_autoriz.png) center /cover;
 }
 
 .main_text {
@@ -1062,7 +1136,7 @@ main {
 .autorization .last-image {
   position: absolute;
   top: 18%;
-  right: 88%;
+  right: 90%;
 }
 
 .input-container {
@@ -1218,10 +1292,6 @@ footer .container {
 
 @media(min-width:1025px) and (max-width:9999px) {        
     
-    .nav {
-        display: none !important;
-    }
-    
     .outro-design {
         display: none;
     }
@@ -1239,10 +1309,8 @@ footer .container {
     }
 }
 
-@media(min-width:481px) and (max-width:1024px) {
-    .logo {
-        margin-left: 20px;
-    }
+@media(min-width:480px) and (max-width:768px) {
+    
 }
 
 @media (min-width:320px) and (max-width:480px) {
@@ -1341,7 +1409,7 @@ footer .container {
     }
 
     .nav_auto-user a {
-        width: 228px;
+        width: 288px;
         height: 50px;
         border-radius: 30px;
         background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);   
@@ -1356,7 +1424,11 @@ footer .container {
     }
 
     .autoriz-button {
-        width: 288px !important;
+        width: 90% !important;
+    }
+
+    .autoriz-button button {
+        margin-right: 0;
     }
 
     .regist-button {
@@ -1384,25 +1456,45 @@ footer .container {
         height: 516px;
     }
 
+    .forgot {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
     /* Мобильный хедер 320р - 480р */
     /* Копируется для других страниц */
 
     /* Мобильный мейн 320р -480р */
 
     .autorization {
-        width: 320px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 100px;
+    }
+
+    main {
+        background: unset;
+    }
+
+    .main_text {
+        background: url(../../img/autoriz320px.png);
+    }
+
+    .autoriz {
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 
     .input-container {
-        width: 288px;
+        width: 90%;
     }
 
     .input-container input {
-        width: 288px;
+        width: 100%;
     }
 
     .autoriz-button button {
-        width: 288px;
+        width: 100%;
         margin-left: 0;
     }
 
@@ -1416,12 +1508,24 @@ footer .container {
 
     .no-acc span a{
         font-size: 16px;
+        margin-left: 36px;
     }
 
     .input-aut::placeholder {
-        padding-left: 42px !important;
+        padding-left: 10% !important;
         font-size: 16px;
     }
+
+    .main_text {
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 105px;
+        margin-bottom: 0;
+    }
+
+    .container {
+        padding: 0; }
+
 
     /* Мобильный мейн 320p - 480p */
 
@@ -1582,21 +1686,12 @@ footer .container {
         position: fixed;
     }
 
-    .nav_auto-user-square {
+    .nav_auto-user {
         margin-top: 40px;
     }
 
-    .nav_auto-user-square p {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-family: var(--mm700i);
-        font-size: 24px;
-        font-style: italic;
-        font-weight: 700;
-        line-height: 29px;
-        letter-spacing: 0em;
-        text-align: left;
-
+    .logo {
+        margin-left: 20px;
     }
 
     .nav_auto-user-square button {
@@ -1629,6 +1724,18 @@ footer .container {
 
     }
 
+    .nav_auto-user-square p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: var(--mm700i);
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
     .nav_main .input-group {
         margin-top: 40px;
     }
@@ -1642,9 +1749,77 @@ footer .container {
         margin-top: 0 !important;
     }
 
-
 /* Мобильный хедер 480 - 768px */
 /* Копируется для других страниц */
+
+/* Мейн 480 - 768*/ 
+
+.autorization {
+    width: 100%;
+    height: auto;
+    margin-bottom: 150px;
+}
+
+main {
+    background: unset;
+}
+
+.main_text {
+    background: url(../../img/autoriz320px.png);
+}
+
+.autoriz {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.input-container {
+    width: 90%;
+}
+
+.input-container input {
+    width: 100%;
+}
+
+.autoriz-button button {
+    width: 100%;
+    margin-left: 0;
+}
+
+.forgot {
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+.no-acc {
+    font-size: 16px;
+}
+
+.no-acc span a{
+    font-size: 16px;
+    margin-left: 36px;
+}
+
+.input-aut::placeholder {
+    padding-left: 10% !important;
+    font-size: 16px;
+}
+
+.main_text {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 105px;
+    margin-bottom: 0;
+}
+
+.container {
+    padding: 0; }
+
+.autoriz-button {
+    width: 90%;
+}
+
+/* Мейн 480 - 768 */ 
 
 /* Копируется для других страниц */
 /* Мобильный футер 480 - 768 px */
@@ -1792,7 +1967,7 @@ footer .container {
 /* Копируется для других страниц */
 /* Мобильный хедер 768 - 1024 р */
 
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width:768px) and (max-width:1023px) {
     header {
         height: 120px;
         position: fixed;
@@ -1806,15 +1981,72 @@ footer .container {
         display: none !important;
     }
 
+    .nav_auto-user {
+        margin-top: 60px;
+    }
+
+    .logo {
+        margin-left: 70px;
+    }
+
+    .nav .logo-image {
+        margin-left: 70px;
+    }
+
+    [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle {
+        right: 45px;
+        top: 28px;
+    }
+}
+
 /* Мобильный хедер 768 - 1024 р */
 /* Копируется для других страниц */
+
+/* Мобильный мейн 768 - 1024 */
+
+@media (min-width:768px) and (max-width:1023px) {
+
+    main {
+        background: unset;
+    }
+    
+    .container {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: unset !important;
+        max-height: unset !important; 
+    }
+    
+    .autorization {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 140px;
+    }
+    
+    .main_text {
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 120px;
+        margin-bottom: 0;
+        background: url(../../img/autoriz320px.png);
+    }
+
+}
+
+/* Мобильный мейн 768 - 1024 */
 
 /* Копируется для других страниц */
 /* Мобильный футер 768 - 1024 р */
 
-    footer {
+@media (min-width:768px) and (max-width:1023px) {
+    footer { 
         width: auto;
         height: 570px !important;
+    }
+
+    .nav-toggle {
+        right: 365px;
+        top: 28px;
     }
 
     footer .container {
@@ -1950,3 +2182,345 @@ footer .container {
 
 /* Мобильный футер 768 - 1024 р */
 /* Копируется для других страниц */
+
+/* Мобильный хедер 1024p - 1800p */
+
+@media (min-width:1024px) and (max-width:1800px) {
+    .navigation-regular {
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+
+    .form-outline input {
+        height: 30px;
+    }
+    
+    .btn-primary {
+        height: 30px;
+    }
+    
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    
+    .logo {
+        margin-left: 0;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .glavnaya a {
+        font-family: var(--mm600);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17.07px;
+        text-align: left;
+    }
+
+    .dropdown button span:first-of-type {
+        font-family: var(--mm600);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17.07px;
+        text-align: left;
+    }
+
+    .form-outline input::placeholder {
+        font-family: var(--mm500);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.63px;
+        text-align: left;
+    }
+
+    .login-section a {
+        font-family: var(--mm600);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17.07px;
+        text-align: left;
+
+    }
+
+    [id='nav-toggle']:checked ~ .nav {
+        width: 380px;
+        height: 768px;
+    }
+
+    .nav .input-group {
+        display: none !important;
+    }
+
+    .nav_main .autoriz-button{
+        display: none !important;
+    }
+
+    .nav_main .regist-button{
+        display: none !important;
+    }
+
+    [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle:after {
+        content: url(../../icons/Group\ 16695.png) !important;
+    }
+
+    [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle {
+        top: 0px;
+        right: 0px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .nav_auto-user-square {
+        margin-top: 100px;
+    }
+
+    .nav-toggle {
+        top: 25px;
+        right: 320px;
+    }
+}
+
+/* Мобильный хедер 1024р-1800р */
+
+/* Мобильный мейн 1024р-1800р */
+
+@media (min-width:1024px) and (max-width:1800px) {
+    .autorization p {
+        margin-top: 40px;   
+        margin-bottom: 60px;
+        font-family: var(--mm500);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+        text-align: left;   
+    }
+
+    .main_text {
+        width: 320px;
+        height: 418px;
+    }
+
+    .input-container input {
+        height: 34px;
+        width: 260px;
+        padding-bottom: 5px;
+        margin-bottom: 20px !important;
+        text-indent: 5px;
+        font-size: 14px;
+    }
+
+    #passwordInput {
+        margin-bottom: 30px !important;
+    }
+    
+    .input-container input::placeholder {
+        font-family: var(--mm500);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17.07px;
+        text-align: left;
+
+    }
+
+    .input-container #loginImage, #passwordImage{
+        top: 13%;
+        right: 88%;
+    }
+
+    .autoriz-button button {
+        width: 260px;
+        font-family: var(--mm600);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.5px;
+        text-align: center;
+        height: 34px;
+    }
+
+    .forgot {
+        font-family: var(--mm400);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.63px;
+        text-align: center;
+        margin-bottom: 46px;
+    }
+
+    .no-acc {
+        margin-top: 0 !important;
+        margin-bottom: 40px !important;
+    }
+
+    .no-acc, .no-acc span a {
+        font-family: var(--mm600) !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        line-height: 14.63px !important;
+
+    }
+}
+
+/* Мобильный мейн 1024р-1800р */
+
+/* Футер 1024px-1800px */
+
+@media (min-width:1024px) and (max-width:1800px) 
+{
+    .footer_item1 h2 {
+        font-family: var(--mm600);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.38px;
+        text-align: left;
+        width: 114px;
+        margin-left: 70px;
+    }
+
+    .nav footer {
+        display: none;
+    }
+
+    .footer_item1 p {
+        display: none;
+    }
+
+    .outro_designers {
+        margin-top: 81px;
+    }
+
+    .outro_designers p {
+        text-align: center;
+        color: #FFFFFF;
+        font-family: var(--mm400);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.5px;
+    }
+
+    .outro_designers span {
+        font-family: var(--mm500);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+        color: #ffffff;
+    }
+
+    .outro {
+        font-family: var(--mm500);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+    }
+
+    .footer {
+        padding-top: 0;
+        margin-top: 70px;
+    }
+
+    footer .container {
+        justify-content: unset !important;
+    }
+
+    .footer_link a{
+        font-family: var(--mm500);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17.07px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .footer_item2 {
+        margin-right: 70px;
+        align-items: flex-start;
+    }
+
+    .footer_item2 p {
+        font-family: var(--mm400);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.5px;
+
+    }
+
+    .footer_item2 a {
+        font-family: var(--mm500);
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 20.72px;
+        text-align: left;
+    }
+
+    .footer_icons-1,
+    .footer_icons-2,
+    .footer_icons-3 {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer_icons {
+        width: 152px;
+        align-self: flex-start;
+    }
+
+    .outro-design span:first-of-type {
+        font-family: var(--mm400);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.5px;
+        text-align: left;
+        color: #ffffff;
+    }
+    
+      .outro-design span:last-of-type {
+        font-family: var(--mm500);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+        text-align: left;
+        color: #FFFFFF;
+      }
+}
+
+@media (min-width:1024px) and (max-width:1800px) {
+    .outro-design {
+      display: none;
+    }
+  }
+
+
+@media (min-width:320px) and (max-width:1023px) {
+    .outro_designers {
+        display: none;
+    }
+}
+
+@media (min-width:1800px) and (max-width:9999px) {
+    .outro_designers {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+}
+
+@media (min-width:1024px) and (max-width:1800px) {
+    .nav {
+        display: inherit;
+    }
+
+    .nav_block .logo {
+        display: none !important;
+    }
+}

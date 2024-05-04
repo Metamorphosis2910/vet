@@ -1,4 +1,19 @@
-
+document.addEventListener('click', function (event) {
+    const burgerMenu = document.getElementById('navbarToggleExternalContent');
+    const burgerButton = document.querySelector('.navbar-toggler');
+  
+    // Если клик был вне бургер-меню и кнопки, то закрываем меню
+    if (!burgerMenu.contains(event.target) && !burgerButton.contains(event.target)) {
+      const isMenuOpen = burgerMenu.classList.contains('show');
+      
+      if (isMenuOpen) {
+        // Используем jQuery для закрытия бургер-меню
+        $(burgerButton).click();
+      }
+    }
+  });
+  
+  
 //   document.addEventListener("contextmenu", function (e){
 //     e.preventDefault();
 // }, false);
@@ -41,23 +56,3 @@ function checkInput(inputId, imageId) {
     image.style.display = 'block';
   }
 }
-
-  function checkInput(inputId, imageId) {
-    var input = document.getElementById(inputId);
-    var image = document.getElementById(imageId);
-    
-    // Если инпут активен (в фокусе) или содержит текст, скрываем изображение
-    if (input.value.trim() !== '' || input === document.activeElement) {
-      image.style.display = 'none';
-    } else {
-      image.style.display = 'inline-block';
-    }
-  }
-
-  window.addEventListener('DOMContentLoaded', function() {
-    // Скрытие изображений при загрузке страницы, если в инпутах есть текст
-    checkInput('loginInput', 'loginImage');
-    checkInput('passwordInput', 'passwordImage');
-  });
-
-

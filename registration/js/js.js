@@ -1,18 +1,4 @@
-document.addEventListener('click', function (event) {
-    const burgerMenu = document.getElementById('navbarToggleExternalContent');
-    const burgerButton = document.querySelector('.navbar-toggler');
-  
-    // Если клик был вне бургер-меню и кнопки, то закрываем меню
-    if (!burgerMenu.contains(event.target) && !burgerButton.contains(event.target)) {
-      const isMenuOpen = burgerMenu.classList.contains('show');
-      
-      if (isMenuOpen) {
-        // Используем jQuery для закрытия бургер-меню
-        $(burgerButton).click();
-      }
-    }
-  });
-  
+
   
 //   document.addEventListener("contextmenu", function (e){
 //     e.preventDefault();
@@ -36,23 +22,13 @@ document.addEventListener('click', function (event) {
 //   }
 //   }
 
-function hidePlaceholder(inputId, placeholderId) {
-  document.getElementById(inputId).setAttribute('placeholder', '');
-  document.getElementById(placeholderId).style.display = 'none';
-}
-
-function showPlaceholder(inputId, placeholderId) {
-  document.getElementById(inputId).setAttribute('placeholder', document.getElementById(placeholderId).textContent);
-  document.getElementById(placeholderId).style.display = 'block';
-}
-
 function checkInput(inputId, imageId) {
-  var inputValue = document.getElementById(inputId).value;
+  var input = document.getElementById(inputId);
   var image = document.getElementById(imageId);
 
-  if (inputValue.trim() !== '') {
+  if (input.value.trim() !== '' || input === document.activeElement) {
     image.style.display = 'none';
   } else {
-    image.style.display = 'block';
+    image.style.display = 'inline-block';
   }
 }

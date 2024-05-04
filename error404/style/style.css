@@ -432,14 +432,15 @@ header {
 }
 
 .main_info {
+    width: 621px;
     height: 523px;
 }
 
 .error {
-    margin-top: 40px;
-    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: var(--mm600);
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 600;
     line-height: 73px;
     letter-spacing: 0em;
@@ -453,7 +454,7 @@ header {
     font-family: var(--mm500);
     font-size: 30px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 37px;
     letter-spacing: 0em;
     text-align: center;
     color: rgba(255, 255, 255, 1);
@@ -497,25 +498,7 @@ header {
 
 }
 
-.submit-button_upper:first-of-type {
-    width: 285px;
-    margin-left: 0;
-    background: rgba(252, 252, 252, 1);
-    box-shadow: 0px 0px 15px 0px #45FCFF;
-    font-family: var(--mmB);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-    letter-spacing: 0em;
-    padding: 17px 48px;
-    border-radius: 30px;
-    color: #ffffff;
-    margin-top: 20px;
-    background: linear-gradient(90deg, #01C0AE 0%, #15A5AE 100%);
-    margin-right: 20px;
-}
-
-.submit-button_upper:last-of-type {
+.submit-button_upper {
     width: 285px;
     margin-left: 0;
     background: rgba(252, 252, 252, 1);
@@ -529,10 +512,6 @@ header {
     border-radius: 30px;
     color: rgba(42, 157, 143, 1);
     margin-top: 20px;
-}
-
-#button1 a {
-    color: #FFFFFF;
 }
 
 .submit-button_upper a {
@@ -557,32 +536,39 @@ footer {
 
 /* Footer end */
 
-
 @media (min-width:320px) and (max-width:480px) {
-    .main {
-        height: unset;
-    }
-    
-    .error {
-        font-size: 32px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
+   .error {
+    font-size: 32px;
+    margin-bottom: 0;
+   }
 
-    .error2 {
-        font-size: 14px;
-        width: 244px;
-        line-height: 17.07px;
-    }
+   .error2 {
+    font-size: 18px;
+    width: 192px;
+    line-height: 22px;
+    margin-top: 0;
+    margin-bottom: 43px;
+   }
 
-    #button1 {
-        margin-right: 0;
-    }
+   .main_span span {
+    font-size: 12px;
+   }
 
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+   .form-outline input {
+    height: 40px;
+   }
 
-    }
+   .btn-primary {
+    height: 40px;
+   }
+   
+   .submit-button_upper {
+    height: 40px;
+    padding: 0;
+   }
+
+   .submit-button_upper a {
+    padding-top: 12px;
+    padding-bottom: 11px;
+   }
 }
