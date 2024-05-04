@@ -953,11 +953,11 @@ main {
     width: 1720px;
     height: 1909px;
     backdrop-filter: blur(30px);
+    margin-bottom: 120px;
 }
 
 .main_desk-zagolovok {
     text-align: center;
-    margin-top: 30px;
     margin-bottom: 60px;
     width: 100%;
     background: #2A9D8F;
