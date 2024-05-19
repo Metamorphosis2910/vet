@@ -962,6 +962,7 @@ main {
 
 .main_text {
     box-shadow: border-box;
+    border-radius: 7px;
     width: 480px;
     height: 790px;
     margin-top: 200px;

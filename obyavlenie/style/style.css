@@ -32,9 +32,9 @@ img {
   }
 
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -285,7 +285,7 @@ header {
 
 .form-outline input {
   width: 194px;
-  height: 30px;
+  height: 35px;
   margin: 0;
   border-radius: 20px 0px 0px 20px;
   font-family: var(--mm500);
@@ -293,10 +293,15 @@ header {
 }
 
 .btn-primary {
-  height: 30px;
+  height: 35px;
   border-radius: 0px 20px 20px 0px;
   background-color: #2A9D8F;
   border-color: #2A9D8F;
+  display: unset !important;
+}
+
+.form-control {
+  font-size: 1rem !important;
 }
 
 .btn-primary:hover {
@@ -949,13 +954,12 @@ main {
     height: auto;
     min-height: 100vh;
     background: url(../../img/Group\ 16683.png) center /cover;
-    margin-top: 120px;
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .main_desk {
     background: rgba(246, 246, 246, 0.7);
-    border-radius: 50px;
     width: 100%;
     backdrop-filter: blur(50px);
 }
@@ -998,7 +1002,7 @@ main {
   height: 650px;
   width: 650px;
   background: rgba(255, 255, 255, 1);
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
   border: 1px solid rgba(34, 34, 34, 1);
 }
 
@@ -1011,7 +1015,7 @@ main {
 .carousel-inner {
   height: 570px;
   width: 648px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .carousel-item {
@@ -1193,7 +1197,7 @@ main {
   width: 650px;
   height: 650px;
   background: rgba(255, 255, 255, 1);
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
   border: 1px solid rgba(34, 34, 34, 1);
 }
 

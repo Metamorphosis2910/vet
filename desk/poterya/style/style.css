@@ -281,7 +281,7 @@ header {
 
 .form-outline input {
     width: 194px;
-    height: 30px;
+    height: 35px;
     margin: 0;
     border-radius: 20px 0px 0px 20px;
     font-family: var(--mm500);
@@ -289,10 +289,15 @@ header {
 }
 
 .btn-primary {
-    height: 30px;
+    height: 35px;
     border-radius: 0px 20px 20px 0px;
     background-color: #2A9D8F;
     border-color: #2A9D8F;
+    display: unset !important;
+}
+
+.form-control {
+    font-size: 1rem !important;
 }
 
 .btn-primary:hover {
@@ -397,7 +402,10 @@ header {
     font-weight: 700;
     line-height: 19.5px;
     text-align: left;
-    margin-left: 10px;
+  }
+
+  .dropdown-item {
+    width: unset !important;
   }
 
   .dropdown-menu li::after {
@@ -938,12 +946,13 @@ main {
 .main-container {
     min-width: 1720px !important;
     max-width: 1920px !important;
+    padding: 0px 300px;
 }
 
 .main-background {
     height: auto;
     min-height: 100vh;
-    background: url(../../../img/pattern.png) center /cover;
+    background: url(../../../img/Group\ 16683.png) center /cover;
     padding-top: 93px;
 }
 
@@ -1021,7 +1030,15 @@ main {
 }
 
 .dropdown-menu {
-    transform: translate(0px, 29px) !important;
+    transform: translate(0px, 46px) !important;
+}
+
+.dropdown-menu2 {
+    transform: translate(-1.5px, -50px) !important;
+}
+
+.dropdown-menu3 {
+    transform: translate(-1.5px, -50px) !important;
 }
 
 .custom-toggle-arrow{

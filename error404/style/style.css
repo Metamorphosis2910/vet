@@ -508,7 +508,7 @@ header {
     font-weight: 700;
     line-height: 17px;
     letter-spacing: 0em;
-    padding: 17px 48px;
+    padding: 0.75rem;
     border-radius: 30px;
     color: rgba(42, 157, 143, 1);
     margin-top: 20px;

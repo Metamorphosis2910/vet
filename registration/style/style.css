@@ -2,7 +2,7 @@
 
 html,body {
     scroll-behavior: smooth;
-    scrollbar-width: 0%;
+    /* scrollbar-width: 0%; */
 }
 
 * {
@@ -537,7 +537,7 @@ header {
     body {
       margin: 0;
       overflow-x: hidden;
-      scrollbar-width: none;
+
     }
 }
 
@@ -960,7 +960,7 @@ header {
 
 
 main {
-    background: url(../../img/back_regis.png) center no-repeat;
+    background: url(../../img/back_autoriz.png) center /cover;
 }
 
 
@@ -972,7 +972,7 @@ main {
     margin-bottom: 200px;
     background: rgba(252, 252, 252, 1);
     box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-
+    border-radius: 7px;
 }
 
 .main_text-sub {

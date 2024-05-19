@@ -16,6 +16,26 @@ a {
     text-decoration: none !important;
 }
 
+.form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+
+input:focus {
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+
+
 .container {
     max-width: 1255px;
 }
@@ -394,6 +414,11 @@ header {
     line-height: 19.5px;
     text-align: left;
     margin-left: 10px;
+  }
+
+  .dropdown-menu li a:hover {
+    color: gray;
+    transition: 0.5s;
   }
 
   .dropdown-menu li::after {

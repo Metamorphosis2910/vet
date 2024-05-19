@@ -82,146 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
 /* Скрипт загрузки фото 1 */      
 /* *********** */   
 
-// function handleImageUpload(index) {
-//   var image = document.getElementById("upload" + index).files[0];
-//   var reader = new FileReader();
-
-//   reader.onload = function (e) {
-//     var displayImage = document.getElementById("display-image" + index);
-//     displayImage.src = e.target.result;
-//     displayImage.style.marginBottom = "0";
-//     displayImage.classList.add("loaded");
-
-//     if (image) {
-//       document.getElementById("close-icon" + index).style.display = "inline";
-//     } else {
-//       document.getElementById("close-icon" + index).style.display = "none";
-//     }
-
-//     var label = document.querySelector("#main_photo");
-//     if (index !== 1) {
-//       label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
-//     }
-//     label.style.display = "none";
-
-//     displayImage.style.content = "none";
-//     if (!image) return;
-
-//     if (displayImage.src.indexOf('mini_icon.png') === -1 && displayImage.src.indexOf('Vector.png') === -1) {
-//       displayImage.classList.add("blur");
-//     }
-//   };
-
-//   reader.readAsDataURL(image);
-
-//   var closeIcon = document.getElementById("close-icon" + index);
-//   closeIcon.addEventListener("mouseover", function() {
-//     var container = document.getElementById("display-image" + index).parentElement;
-//     container.classList.add("blur");
-//   });
-
-//   closeIcon.addEventListener("mouseout", function() {
-//     var container = document.getElementById("display-image" + index).parentElement;
-//     container.classList.remove("blur");
-//   });
-// }
-
-// function removeImage(index) {
-//   var displayImage = document.getElementById("display-image" + index);
-//   displayImage.src = "img/Vector.png";
-//   displayImage.style.marginBottom = "20px";
-//   displayImage.classList.remove("loaded", "blur");
-
-//   document.getElementById("close-icon" + index).style.display = "none";
-//   document.getElementById("upload" + index).value = "";
-
-//   var label = document.querySelector("#main_photo");
-//   if (index !== 1) {
-//     label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
-//   }
-//   label.style.display = "block";
-// }
-
-// function showCloseIcon(index) {
-//   var image = document.getElementById("upload" + index).files[0];
-//   if (image) {
-//     document.getElementById("close-icon" + index).style.display = "inline";
-//     document.getElementById("display-image" + index).classList.add("blur");
-//   }
-// }
-
-// function hideCloseIcon(index) {
-//   document.getElementById("close-icon" + index).style.display = "none";
-//   document.getElementById("display-image" + index).classList.remove("blur");
-// }
-
-
-// function handleImageUpload(index) {
-//   var image = document.getElementById("upload" + index).files[0];
-//   var reader = new FileReader();
-
-//   reader.onload = function (e) {
-//     var displayImage = document.getElementById("display-image" + index);
-//     displayImage.src = e.target.result;
-//     displayImage.style.marginBottom = "0";
-//     displayImage.classList.add("loaded");
-
-//     if (image) {
-//       document.getElementById("close-icon" + index).style.display = "inline";
-//     } else {
-//       document.getElementById("close-icon" + index).style.display = "none";
-//     }
-
-//     var label = document.querySelector("#main_photo");
-//     if (index !== 1) {
-//       label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
-//     }
-//     label.style.display = "none";
-
-//     displayImage.style.content = "none";
-//   };
-
-//   reader.readAsDataURL(image);
-
-//   var closeIcon = document.getElementById("close-icon" + index);
-//   closeIcon.addEventListener("mouseover", function() {
-//     var container = document.getElementById("display-image" + index).parentElement;
-//     container.classList.add("blur");
-//   });
-
-//   closeIcon.addEventListener("mouseout", function() {
-//     var container = document.getElementById("display-image" + index).parentElement;
-//     container.classList.remove("blur");
-//   });
-// }
-
-
-// /* *********** */
-// /* Скрипт загрузки фото 1 */      
-// /* *********** */ 
-
-// document.getElementById('nav-toggle').addEventListener('change', function() {
-//   if (this.checked) {
-//       // Бургер-меню открыто, отключаем скролл
-//       document.body.style.overflow = 'hidden';
-//   } else {
-//       // Бургер-меню закрыто, включаем скролл
-//       document.body.style.overflow = '';
-//   }
-// });
-
-// window.onload = function() {
-//   var screenWidth = window.innerWidth;
-//   var vectorImg = document.getElementById("vectorImg");
-
-//   // Проверяем, находится ли ширина экрана в диапазоне 768px-1024px
-//   if (screenWidth >= 768 && screenWidth <= 1024) {
-//       // Меняем источник изображения на изображение с названием "768px.png"
-//       vectorImg.src = "768px.png";
-//       vectorImg.alt = "768px Image"; // Опционально: изменяем альтернативный текст
-//   }
-// };
-
 function handleImageUpload(index) {
   var image = document.getElementById("upload" + index).files[0];
   var reader = new FileReader();
@@ -320,4 +180,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+/* *********** */
+/* Скрипт загрузки фото 1 */      
+/* *********** */  
 
+demoTextBox.addEventListener('keydown', () => {
+	demoTextBox.value = demoTextBox.value.replace(/\D/g, '')
+})
+
+demoTextBox.addEventListener('keyup', () => {
+	demoTextBox.value = demoTextBox.value.replace(/\D/g, '')
+})
