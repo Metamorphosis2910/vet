@@ -1006,6 +1006,10 @@ main {
     font-size: 20px;
 }
 
+.input-aut_last {
+    padding-left: 23px;
+}
+
 .autoriz {
     font-family: var(--mm500);
     font-size: 25px;
@@ -1090,12 +1094,16 @@ main {
     padding-left: 50px;
     color: rgba(177, 177, 177, 1);
     font-family: var(--mm500);
-    font-size: 20px;
+    font-size: 20px !important;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
 
+}
+
+.input-aut_last::placeholder {
+    padding-left: 20px;
 }
 
 .input-container {
@@ -1112,7 +1120,7 @@ main {
 
 .confirm-password-image {
     position: absolute;
-    top: 18%;
+    top: 19%;
     right: 88%;
 }
 
@@ -1157,7 +1165,7 @@ main {
 .autorization .first-image,
 .autorization .last-image {
   position: absolute;
-  top: 18%;
+  top: 19%;
   right: 88%;
 }
 

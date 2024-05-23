@@ -18,7 +18,8 @@ a {
 
 .form-control:focus{
     box-shadow: none;
-    border: none;
+    /* border: none; */
+    border-color: #ced4da;
 }
 
 input:focus {
