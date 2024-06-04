@@ -123,7 +123,7 @@ function removeImage(index) {
     label = document.querySelectorAll(".photo_cont-upper-trio p")[index - 2];
   }
 
-  displayImage.src = "img/Vector.png";
+  displayImage.src = "img/Vector.svg";
   displayImage.style.marginBottom = "20px";
   displayImage.classList.remove("loaded");
   closeIcon.style.display = "none";

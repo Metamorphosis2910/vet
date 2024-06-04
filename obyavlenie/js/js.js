@@ -97,3 +97,33 @@ function scrollToTop() {
     }
   });
     
+
+  function toggleExpand() {
+    var container = document.querySelector('.main_desk-info-container');
+    var desc = document.getElementById('desc');
+    var expandBtn = document.getElementById('expand-btn');
+    if (container.classList.contains('expanded')) {
+        container.classList.remove('expanded');
+        desc.style.webkitLineClamp = 10;
+        expandBtn.querySelector('span').textContent = 'Развернуть';
+    } else {
+        container.classList.add('expanded');
+        desc.style.webkitLineClamp = 'unset';
+        expandBtn.querySelector('span').textContent = 'Свернуть';
+    }
+}
+
+document.getElementById('expand-btn').addEventListener('click', function() {
+    if (window.innerWidth >= 320 && window.innerWidth <= 1023) {
+        toggleExpand();
+    }
+});
+
+window.addEventListener('resize', function() {
+    var container = document.querySelector('.main_desk-info-container');
+    if (window.innerWidth < 320 || window.innerWidth > 1023) {
+        container.classList.remove('expanded');
+        document.getElementById('desc').style.webkitLineClamp = 10;
+        document.getElementById('expand-btn').querySelector('span').textContent = 'Развернуть';
+    }
+});

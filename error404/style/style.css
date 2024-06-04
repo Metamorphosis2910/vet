@@ -427,7 +427,7 @@ header {
 /* Main start */
 
 .main {
-    height: 912px;
+    height: 100vh;
     background: url(../../img/BACKGROUND.png) no-repeat center center /cover;
 }
 
@@ -550,6 +550,11 @@ footer {
     margin-bottom: 43px;
    }
 
+   .main_info img {
+    width: 100px;
+    height: 92px;
+   }
+
    .main_span span {
     font-size: 12px;
    }
@@ -571,4 +576,12 @@ footer {
     padding-top: 12px;
     padding-bottom: 11px;
    }
+}
+
+@media (min-width:480px) and (max-width:9999px) 
+{
+    .main_info img {
+        width: 138px;
+        height: 128px;
+    }
 }

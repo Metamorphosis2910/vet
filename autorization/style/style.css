@@ -356,6 +356,16 @@ header {
     background-color: #2A9D8F;
   }
   
+  .ellipse {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ellipse img {
+    height: 22px;
+    width: 22px;
+  }
+
   .login-icon {
     position: absolute;
     top: 50%;
@@ -1304,7 +1314,7 @@ footer .container {
 /* Мобильные свойства */
 /* Копируется для других страниц */  
 
-@media (min-width:320px) and (max-width:1024px) {
+@media (min-width:320px) and (max-width:1023px) {
     .header_buttons {
         display: none !important;
     }
@@ -1492,6 +1502,7 @@ footer .container {
 
     .input-container input {
         width: 100%;
+        height: 40px;
     }
 
     .autoriz-button button {
@@ -1525,7 +1536,15 @@ footer .container {
     }
 
     .container {
-        padding: 0; }
+        padding: 0; 
+    }
+
+    .autorization .first-image,
+.autorization .last-image {
+  position: absolute;
+  top: 13%;
+  right: 90%;
+}
 
 
     /* Мобильный мейн 320p - 480p */
@@ -1974,16 +1993,28 @@ main {
         position: fixed;
     }
 
+    .nav_main .input-group {
+        width: 90%;
+        margin-top: 30px !important;
+        flex-wrap: nowrap;
+    }
+
+    .nav_main .input-group .form-outline {
+        width: 588px !important;
+    }
+
+    .nav_main .input-group .form-outline input {
+        width: 100% !important;
+        height: 40px;
+        border: solid 1px #54B0A4;
+    }
+
     .header_buttons {
         display: none !important;
     }
 
     .navigation-regular .search_login {
         display: none !important;
-    }
-
-    .nav_auto-user {
-        margin-top: 60px;
     }
 
     .logo {
@@ -1996,7 +2027,52 @@ main {
 
     [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle {
         right: 45px;
-        top: 28px;
+        top: 25px;
+    }
+
+    .nav_auto-user-square {
+        margin-top: 70px;
+    }
+
+    .nav_auto-user a {
+        width: 628px;
+        height: 50px;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);
+        color: white;
+        font-family: var(--mm600);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .nav_auto-user-square button {
+        margin-bottom: 40px;
+        font-family: var(--mm600);
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #F67C7C;
+        background: none;
+        border-radius: none;
+        border: none;
+    }
+
+    .nav_auto-user-square p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: var(--mm700i);
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
     }
 }
 
@@ -2047,7 +2123,7 @@ main {
 
     .nav-toggle {
         right: 365px;
-        top: 28px;
+        top: 25px;
     }
 
     footer .container {

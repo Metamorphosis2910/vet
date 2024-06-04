@@ -427,7 +427,7 @@ header {
 /* Main start */
 
 .main {
-    height: 912px;
+    height: 100vh;
     background: url(../../img/BACKGROUND.png) no-repeat center center /cover;
 }
 
@@ -507,17 +507,19 @@ header {
     font-weight: 700;
     line-height: 17px;
     letter-spacing: 0em;
-    padding: 17px 48px;
+    padding: 13px 48px;
     border-radius: 30px;
     color: #ffffff;
     margin-top: 20px;
     background: linear-gradient(90deg, #01C0AE 0%, #15A5AE 100%);
     margin-right: 20px;
+    height: 40px;
 }
 
 .submit-button_upper:last-of-type {
     width: 285px;
     margin-left: 0;
+    height: 40px;
     background: rgba(252, 252, 252, 1);
     box-shadow: 0px 0px 15px 0px rgba(69, 252, 255, 1);
     font-family: var(--mmB);
@@ -525,7 +527,7 @@ header {
     font-weight: 700;
     line-height: 17px;
     letter-spacing: 0em;
-    padding: 17px 48px;
+    padding: 13px 48px;
     border-radius: 30px;
     color: rgba(42, 157, 143, 1);
     margin-top: 20px;
@@ -559,9 +561,7 @@ footer {
 
 
 @media (min-width:320px) and (max-width:480px) {
-    .main {
-        height: unset;
-    }
+    
     
     .error {
         font-size: 32px;
@@ -584,5 +584,76 @@ footer {
         align-items: center;
         justify-content: center;
 
+    }
+}
+ 
+@media (min-width:480px) and (max-width:768px) {
+    .error {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .error2 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36.57px;
+        text-align: center;
+        width: 332px;
+        margin-bottom: 40px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .submit-button_upper:first-of-type {
+        width: 440px;
+        height: 45px;
+        padding: 14px 48px;
+    }
+
+    .submit-button_upper:last-of-type {
+        width: 440px;
+        height: 45px;
+        padding: 14px 48px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .error {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .error2 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36.57px;
+        text-align: center;
+        width: 332px;
+        margin-bottom: 40px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .submit-button_upper:first-of-type {
+        width: 440px;
+        height: 45px;
+        padding: 14px 48px;
+    }
+
+    .submit-button_upper:last-of-type {
+        width: 440px;
+        height: 45px;
+        padding: 14px 48px;
+    }
+}
+
+@media (min-width:320px) and (max-width:9999px) {
+    .main_info img {
+        width: 120px;
+        height: 120px;
     }
 }

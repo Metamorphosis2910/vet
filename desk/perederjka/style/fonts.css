@@ -42,3 +42,18 @@
     font-family: 'MSBItalic';
     src: url(../../../fonts/Montserrat-SemiBoldItalic.ttf);
 }
+
+@font-face {
+    font-family: 'BoldItalic';
+    src: url(../../../fonts/Montserrat-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans400';
+    src: url(../../../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans600';
+    src: url(../../../fonts/OpenSans-SemiBold.ttf);
+}

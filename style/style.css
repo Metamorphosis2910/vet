@@ -438,6 +438,16 @@ header {
      border-color: #F3F3F3; 
   }
 
+  .ellipse {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ellipse img {
+    width: 22px;
+    height: 22px;
+  }
+
 /* Header End */ 
 /* ********************* */
 
@@ -1513,7 +1523,7 @@ footer .container {
 /********************************************************************************************************************************************/
 /* Копируется для других страниц */
 /* Мобильный хедер 320р - 480р */
-@media (min-width:320px) and (max-width:480px) {
+@media (min-width:320px) and (max-width:479px) {
     header {
         height: 107px;
         position: fixed;
@@ -1795,7 +1805,7 @@ footer .container {
 /******************************/
 /* Копируется для других страниц */
 /* Мобильный футер 320p - 480р */
-@media (min-width:320px) and (max-width:480px) {
+@media (min-width:320px) and (max-width:479px) {
     footer {
         width: auto;
         height: 570px !important;
@@ -2116,6 +2126,10 @@ footer .container {
         display: none;
     }
 
+    .main-text p {
+        margin-top: 20px;
+    }
+
     /* Копируется для других страниц */
     /* Мобильный футер 480 - 768 px */
     footer {
@@ -2364,15 +2378,22 @@ footer .container {
 
     .nav-toggle {
         right: 365px;
-        top: 28px;
+        top: 25px;
     }
 
     [id='nav-toggle']:checked ~ .nav > .nav_block > .nav-toggle {
-        right: 40px;
+        right: 45px;
     }
 
     .nav_main .input-group {
-        margin-top: 40px !important;
+        margin-top: 30px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .nav_main .input-group .form-outline input {
+        width: 588px !important;
+        height: 40px;
+        border: solid 1px #54B0A4;
     }
 
     .nav_auto-user-square {
@@ -2728,12 +2749,12 @@ footer .container {
         height: auto;
         padding-bottom: 0;
         margin-bottom: 50px;
-        min-height: 640px;
+        min-height: 708px;
     }
 
     .main-text {
         padding-left: 70px;
-        padding-top: 145px;
+        padding-top: 122px;
     }
 
     .main_mejdu-text {
@@ -2758,6 +2779,18 @@ footer .container {
     .column-2 a img {
         width: 80px !important; 
         height: 80px !important;
+    }
+
+    .main_upper-text, 
+    .main_mid-text, 
+    .main_down-text {
+        font-size: 40px;
+        margin-bottom: 2px;
+    }
+
+    .main-text p {
+        width: 331px;
+        font-size: 20px;
     }
 
     .column-shadow {
@@ -2901,6 +2934,13 @@ footer .container {
         display: none;
     }
 
+    .nav {
+        display: none !important;
+    }
+
+    .nav .logo {
+        display: none !important;
+    }
 }
 
 @media (min-width:1024px) and (max-width:1800px) {
