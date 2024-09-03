@@ -1,97 +1,87 @@
 const express = require('express');
-const { ApolloServer, gql } = require('apollo-server-express');
+const { graphqlHTTP } = require('express-graphql');
+const { buildSchema } = require('graphql');
 
-// Временные массивы для хранения данных пользователей и объявлений
-let users = [];
-let ads = [];
-
-// Определение типов GraphQL для пользователей, авторизации и объявлений
-const typeDefs = gql`
-  type User {
-    id: ID!
-    name: String!
-    email: String!
-    phone: String!
-  }
-
-  type Ad {
-    id: ID!
-    title: String!
-    description: String!
-    city: String!
-    phone: String!
-    images: [String]!
-  }
-
-  type Token {
-    token: String!
-  }
-
+// Определение схемы GraphQL
+const schema = buildSchema(`
   type Query {
-    ads: [Ad]
+    hello: String
   }
 
   type Mutation {
-    register(name: String!, email: String!, phone: String!, password: String!): User
-    login(email: String!, password: String!): Token
-    createAd(title: String!, description: String!, city: String!, phone: String!, images: [String]!): Ad
+    register(name: String!, phone: String!, email: String!, password: String!): String
+    login(username: String!, password: String!): String
+    createAd(title: String!, description: String!, city: String!, phone: String!): String
   }
-`;
+`);
 
-// Резолверы для обработки запросов
-const resolvers = {
-  Query: {
-    ads: () => ads,
+// Определение резолверов для запросов и мутаций
+const root = {
+  hello: () => 'Hello world!',
+  
+  register: async ({ name, phone, email, password }) => {
+    // Здесь можно добавить логику для отправки запроса на бэкэнд для регистрации
+    console.log(`Registering user: ${name}, ${phone}, ${email}`);
+    // Пример отправки данных на бэкэнд
+    await sendToBackend('/register', { name, phone, email, password });
+    return 'Registration request sent to backend.';
   },
-  Mutation: {
-    // Регистрация пользователя
-    register: (parent, { name, email, phone, password }) => {
-      const newUser = {
-        id: users.length + 1,
-        name,
-        email,
-        phone,
-        password, // Не храните пароли в открытом виде в реальных приложениях
-      };
-      users.push(newUser);
-      return newUser;
-    },
-    
-    // Авторизация пользователя
-    login: (parent, { email, password }) => {
-      // В реальном приложении вы должны проверять email и пароль
-      const user = users.find(user => user.email === email && user.password === password);
-      if (!user) {
-        throw new Error('Неверные учетные данные');
-      }
-      // Возвращаем фиктивный токен для примера
-      return { token: "dummy-token" };
-    },
-
-    // Создание объявления
-    createAd: (parent, { title, description, city, phone, images }) => {
-      const newAd = {
-        id: ads.length + 1,
-        title,
-        description,
-        city,
-        phone,
-        images
-      };
-      ads.push(newAd);
-      return newAd;
-    },
+  
+  login: async ({ username, password }) => {
+    // Здесь можно добавить логику для отправки запроса на бэкэнд для авторизации
+    console.log(`Logging in user: ${username}`);
+    await sendToBackend('/login', { username, password });
+    return 'Login request sent to backend.';
   },
+  
+  createAd: async ({ title, description, city, phone }) => {
+    // Здесь можно добавить логику для отправки запроса на бэкэнд для подачи объявления
+    console.log(`Creating ad: ${title}, ${description}, ${city}`);
+    await sendToBackend('/createAd', { title, description, city, phone });
+    return 'Ad creation request sent to backend.';
+  }
 };
 
-// Инициализация сервера Apollo
-const server = new ApolloServer({ typeDefs, resolvers });
+// Функция для отправки данных на бэкэнд
+async function sendToBackend(endpoint, data) {
+  // Здесь можно реализовать отправку данных на ваш бэкэнд, например, с помощью fetch или axios
+  console.log(`Sending data to ${endpoint}:`, data);
+  // Например, с использованием fetch:
+  // await fetch(`http://backend-server.com${endpoint}`, {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify(data)
+  // });
+}
 
+// Создание сервера Express
 const app = express();
-server.start().then(() => {
-  server.applyMiddleware({ app });
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true,
+}));
 
-  app.listen({ port: 4000 }, () =>
-    console.log(`Server ready at http://localhost:4000${server.graphqlPath}`)
-  );
-});
+app.listen(4000, () => console.log('GraphQL API server running at http://localhost:4000/graphql'));
+
+async function sendToBackend(endpoint, data) {
+  try {
+    const response = await fetch(`http://backend-server.com${endpoint}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(`Response from backend:`, result);
+  } catch (error) {
+    console.error(`Error sending data to backend:`, error);
+  }
+}
+
+
+
