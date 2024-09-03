@@ -1,6 +1,10 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.json()); // Используем body-parser для парсинга JSON данных
 
 // Определение схемы GraphQL
 const schema = buildSchema(`
@@ -20,22 +24,18 @@ const root = {
   hello: () => 'Hello world!',
   
   register: async ({ name, phone, email, password }) => {
-    // Здесь можно добавить логику для отправки запроса на бэкэнд для регистрации
     console.log(`Registering user: ${name}, ${phone}, ${email}`);
-    // Пример отправки данных на бэкэнд
     await sendToBackend('/register', { name, phone, email, password });
     return 'Registration request sent to backend.';
   },
   
   login: async ({ username, password }) => {
-    // Здесь можно добавить логику для отправки запроса на бэкэнд для авторизации
     console.log(`Logging in user: ${username}`);
     await sendToBackend('/login', { username, password });
     return 'Login request sent to backend.';
   },
   
   createAd: async ({ title, description, city, phone }) => {
-    // Здесь можно добавить логику для отправки запроса на бэкэнд для подачи объявления
     console.log(`Creating ad: ${title}, ${description}, ${city}`);
     await sendToBackend('/createAd', { title, description, city, phone });
     return 'Ad creation request sent to backend.';
@@ -44,29 +44,8 @@ const root = {
 
 // Функция для отправки данных на бэкэнд
 async function sendToBackend(endpoint, data) {
-  // Здесь можно реализовать отправку данных на ваш бэкэнд, например, с помощью fetch или axios
-  console.log(`Sending data to ${endpoint}:`, data);
-  // Например, с использованием fetch:
-  // await fetch(`http://backend-server.com${endpoint}`, {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(data)
-  // });
-}
-
-// Создание сервера Express
-const app = express();
-app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: root,
-  graphiql: true,
-}));
-
-app.listen(4000, () => console.log('GraphQL API server running at http://localhost:4000/graphql'));
-
-async function sendToBackend(endpoint, data) {
   try {
-    const response = await fetch(`http://backend-server.com${endpoint}`, {
+    const response = await fetch(`http://localhost:4000${endpoint}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -83,5 +62,26 @@ async function sendToBackend(endpoint, data) {
   }
 }
 
+// Маршруты для обработки запросов
+app.post('/register', (req, res) => {
+  console.log('Received registration data:', req.body);
+  res.json({ message: 'Registration successful' });
+});
 
+app.post('/login', (req, res) => {
+  console.log('Received login data:', req.body);
+  res.json({ message: 'Login successful' });
+});
 
+app.post('/createAd', (req, res) => {
+  console.log('Received ad data:', req.body);
+  res.json({ message: 'Ad created successfully' });
+});
+
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true,
+}));
+
+app.listen(4000, () => console.log('GraphQL API server running at http://localhost:4000/graphql'));
