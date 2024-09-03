@@ -23,43 +23,32 @@ const schema = buildSchema(`
 const root = {
   hello: () => 'Hello world!',
   
-  register: async ({ name, phone, email, password }) => {
+  register: ({ name, phone, email, password }) => {
     console.log(`Registering user: ${name}, ${phone}, ${email}`);
-    await sendToBackend('/register', { name, phone, email, password });
-    return 'Registration request sent to backend.';
+    sendToBackend('/register', { name, phone, email, password });
+    return 'Registration request sent.';
   },
   
-  login: async ({ username, password }) => {
+  login: ({ username, password }) => {
     console.log(`Logging in user: ${username}`);
-    await sendToBackend('/login', { username, password });
-    return 'Login request sent to backend.';
+    sendToBackend('/login', { username, password });
+    return 'Login request sent.';
   },
   
-  createAd: async ({ title, description, city, phone }) => {
+  createAd: ({ title, description, city, phone }) => {
     console.log(`Creating ad: ${title}, ${description}, ${city}`);
-    await sendToBackend('/createAd', { title, description, city, phone });
-    return 'Ad creation request sent to backend.';
+    sendToBackend('/createAd', { title, description, city, phone });
+    return 'Ad creation request sent.';
   }
 };
 
 // Функция для отправки данных на бэкэнд
-async function sendToBackend(endpoint, data) {
-  try {
-    const response = await fetch(`http://localhost:4000${endpoint}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const result = await response.json();
-    console.log(`Response from backend:`, result);
-  } catch (error) {
-    console.error(`Error sending data to backend:`, error);
-  }
+function sendToBackend(endpoint, data) {
+  fetch(`http://localhost:4000${endpoint}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  }).catch(error => console.error(`Error sending data to backend:`, error));
 }
 
 // Маршруты для обработки запросов
