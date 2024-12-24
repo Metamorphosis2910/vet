@@ -23,32 +23,43 @@ const schema = buildSchema(`
 const root = {
   hello: () => 'Hello world!',
   
-  register: ({ name, phone, email, password }) => {
+  register: async ({ name, phone, email, password }) => {
     console.log(`Registering user: ${name}, ${phone}, ${email}`);
-    sendToBackend('/register', { name, phone, email, password });
-    return 'Registration request sent.';
+    await sendToBackend('/register', { name, phone, email, password });
+    return 'Registration request sent to backend.';
   },
   
-  login: ({ username, password }) => {
+  login: async ({ username, password }) => {
     console.log(`Logging in user: ${username}`);
-    sendToBackend('/login', { username, password });
-    return 'Login request sent.';
+    await sendToBackend('/login', { username, password });
+    return 'Login request sent to backend.';
   },
   
-  createAd: ({ title, description, city, phone }) => {
+  createAd: async ({ title, description, city, phone }) => {
     console.log(`Creating ad: ${title}, ${description}, ${city}`);
-    sendToBackend('/createAd', { title, description, city, phone });
-    return 'Ad creation request sent.';
+    await sendToBackend('/createAd', { title, description, city, phone });
+    return 'Ad creation request sent to backend.';
   }
 };
 
 // Функция для отправки данных на бэкэнд
-function sendToBackend(endpoint, data) {
-  fetch(`http://localhost:4000${endpoint}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  }).catch(error => console.error(`Error sending data to backend:`, error));
+async function sendToBackend(endpoint, data) {
+  try {
+    const response = await fetch(`http://localhost:4000${endpoint}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(`Response from backend:`, result);
+  } catch (error) {
+    console.error(`Error sending data to backend:`, error);
+  }
 }
 
 // Маршруты для обработки запросов
